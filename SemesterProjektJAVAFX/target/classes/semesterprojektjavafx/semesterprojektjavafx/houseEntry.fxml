@@ -14,6 +14,9 @@
             <Region />
          </root>
       </SubScene>
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="263.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../src/main/resources/semesterprojektjavafx/semesterprojektjavafx/houseEntry-pixilart.png" />
+         </image></ImageView>
    </children>
 </VBox>
