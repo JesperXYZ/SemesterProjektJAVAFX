@@ -9,6 +9,10 @@
    <children>
       <Label text="The House Entry" />
       <Button mnemonicParsing="false" onAction="#goCorridor" text="Go corridor" />
+      <Button mnemonicParsing="false" onAction="#goClub" text="Go club" />
+      <Button mnemonicParsing="false" onAction="#goBirthdayParty" text="Go birthdayParty" />
+      <Button mnemonicParsing="false" onAction="#goSchool" text="Go school" />
+      <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
       <SubScene id="kitchen" height="151.0" width="600.0">
          <root>
             <Region />

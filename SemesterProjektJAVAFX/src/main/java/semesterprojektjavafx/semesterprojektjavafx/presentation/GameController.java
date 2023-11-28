@@ -22,6 +22,12 @@ public class GameController extends Application {
     private static final String GARDEN_FILE = "/semesterprojektjavafx/semesterprojektjavafx/garden.fxml";
     private static final String BEDROOM_FILE = "/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml";
     private static final String KITCHEN_FILE = "/semesterprojektjavafx/semesterprojektjavafx/kitchen.fxml";
+    private static final String CLUB_FILE = "/semesterprojektjavafx/semesterprojektjavafx/club.fxml";
+    private static final String BIRTHDAYPARTY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/birthdayParty.fxml";
+    private static final String SCHOOL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/school.fxml";
+    private static final String FOOTBALL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/football.fxml";
+
+
     @FXML
     Stage game = new Stage();
     /*@FXML
@@ -139,6 +145,38 @@ public class GameController extends Application {
     @FXML
     void goBedroom(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource(BEDROOM_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void goClub(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(CLUB_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void goBirthdayParty(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(BIRTHDAYPARTY_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void goSchool(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(SCHOOL_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    void goFootball(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(FOOTBALL_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
