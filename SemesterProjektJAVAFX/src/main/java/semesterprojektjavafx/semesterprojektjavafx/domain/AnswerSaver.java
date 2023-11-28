@@ -1,0 +1,24 @@
+package semesterprojektjavafx.semesterprojektjavafx.domain;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class AnswerSaver {
+
+    public static void saveAnswer(String answer) {
+        File answersFile = new File("answers.txt");
+        PrintWriter pw;
+
+        try {
+            pw = new PrintWriter(new FileWriter(answersFile, true));
+            // ,true laver det til append tilstand som gør at den gamle fil ikke overrides, og dermed tilføjer svar til den gamle fil.
+            pw.println("Brugernes svar: " + answer);
+            pw.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}

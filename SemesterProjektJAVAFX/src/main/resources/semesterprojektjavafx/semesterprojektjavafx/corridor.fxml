@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.GameController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="The corridor" />
+        <Button mnemonicParsing="false" onAction="#goHouseEntry" text="Go houseEntry" />
+        <Button mnemonicParsing="false" onAction="#goGarden" text="Go garden" />
+        <Button mnemonicParsing="false" onAction="#goBedroom" text="Go bedroom" />
+        <Button mnemonicParsing="false" onAction="#goKitchen" text="Go kitchen" />
+        <SubScene id="corridor" height="400.0" width="600.0">
+            <root>
+                <Region />
+            </root>
+        </SubScene>
+    </children>
+</VBox>
