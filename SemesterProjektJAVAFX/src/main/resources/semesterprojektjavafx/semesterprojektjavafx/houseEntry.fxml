@@ -2,42 +2,17 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.RoomController">
    <children>
-      <Pane prefHeight="356.0" prefWidth="538.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect></Pane>
-      <Pane layoutX="251.0" prefHeight="160.0" prefWidth="200.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect>
-      </Pane>
-      <Pane layoutX="345.0" prefHeight="160.0" prefWidth="200.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect>
-      </Pane>
-      <Pane layoutY="189.0" prefHeight="160.0" prefWidth="200.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect>
-      </Pane>
-      <Pane layoutX="251.0" layoutY="189.0" prefHeight="160.0" prefWidth="200.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect>
-      </Pane>
-      <Pane layoutX="345.0" layoutY="189.0" prefHeight="160.0" prefWidth="200.0">
-         <effect>
-            <ColorInput height="255.0" paint="BLACK" width="255.0" />
-         </effect>
-      </Pane>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false">
+         <image>
+            <Image url="@billeder/blackscreen.png" />
+         </image>
+      </ImageView>
       <ImageView fitHeight="360.0" fitWidth="341.0" layoutX="130.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@billeder/houseEntry.png" />
@@ -52,7 +27,7 @@
             <Button mnemonicParsing="false" onAction="#goSchool" text="Go school" />
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
-            <Button mnemonicParsing="false" text="Begin activity" onAction="#beginActivity"/>
+            <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
             <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
             </fx:include>
             <fx:include source="ButtonsAndPanes/grabItem.fxml">
@@ -68,7 +43,11 @@
          <children>
             <HBox prefHeight="0.0" prefWidth="100.0">
                <children>
-                  <Label text="Day: " textFill="WHITE" />
+                  <Label text="Day: " textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
                   <fx:include source="ButtonsAndPanes/dayCount.fxml">
                   </fx:include>
                </children>
