@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class RoomController {
     private static final String HOUSEENTRY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml";
@@ -41,7 +42,13 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("houseEntry");
+        if(Objects.equals(Game.context.getCurrent().getName(), "The Corridor"))
+        {
+            Game.context.transition("houseEntry");
+        }
+        else {
+            Game.context.transition("home");
+        }
     }
     @FXML
     void goGarden(ActionEvent event) throws IOException {

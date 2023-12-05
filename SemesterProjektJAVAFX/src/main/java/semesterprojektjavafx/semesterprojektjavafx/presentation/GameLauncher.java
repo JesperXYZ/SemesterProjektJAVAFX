@@ -29,7 +29,6 @@ public class GameLauncher extends Application {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("houseEntry");
         /*
         boolean hungerLevelLow = false, hugerLevelHigh = false, glucoseLevelLow = false, glucoseLevelHigh = false;
         boolean win = false;
