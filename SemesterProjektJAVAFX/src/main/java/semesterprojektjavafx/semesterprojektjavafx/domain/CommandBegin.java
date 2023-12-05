@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class CommandBegin extends BaseCommand implements Command {
     static Scanner  scanner  = new Scanner(System.in);
-    boolean activityDone = false;
-    String[] activity = {"school", "work", "football", "gardening", "birthday", "clubbing"};
+    static boolean activityDone = false;
+    static String[] activity = {"school", "work", "football", "gardening", "birthday", "clubbing"};
     static String[] begun = {"you have begun school!",
             "you have begun work!",
             "you have begun football!",
@@ -29,7 +29,7 @@ public class CommandBegin extends BaseCommand implements Command {
     static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-5,-3,-5},{-3,-5,0,0},{3,2,3,1},{1,-3,3,0}};
     //0=glucose1 1=hunger1 2=glucose2 3=hunger2
 
-    String[] nightQuestion = {"Question of the day\n" +
+    static String[] nightQuestion = {"Question of the day\n" +
                 "Which of these lower your blood sugar?\n" +
                 "Physical activity, food and drinks, using insulin, sleeping\n" +
                 "Pick 1, 2, 3 or 4\n",
@@ -55,7 +55,7 @@ public class CommandBegin extends BaseCommand implements Command {
                     "Which type of carbohydrate have a tendency to affect the blood sugar more dramatically then other types og carbohydrates?\n" +
                     "Complex carbohydrates such as whole grain products, fat has a bigger affect on the blood sugar than carbohydrates,\n simple carbohydrates such as sugar has a tendency to make the blood sugar rise quickly, protein has no affect on the blood sugar\n" +
                     "Pick 1, 2, 3 or 4\n"};
-    String[] rightNightChoise = {"1", "1", "2", "4", "1", "3"};
+    static String[] rightNightChoise = {"1", "1", "2", "4", "1", "3"};
     String[][] wrongNightChoise = {{"2", "3", "4"}, {"2", "3", "4"}, {"1", "3", "4"}, {"1", "2", "3"},{"2","3","4"},{"1","2","4"}};
 
     CommandBegin() {
@@ -151,6 +151,10 @@ public class CommandBegin extends BaseCommand implements Command {
         }
     }
 
+    public static String getActivity(){
+        return activity[DayCount.getDay()];
+    }
+
     public static String getBegun() {
         return begun[DayCount.getDay()];
     }
@@ -178,5 +182,19 @@ public class CommandBegin extends BaseCommand implements Command {
     }
     public static double getHuger2(){
         return setLevel[DayCount.getDay()][3];
+    }
+    public static boolean getActivityDone(){
+        return activityDone;
+    }
+    public static void setActivityDone(boolean value){
+        activityDone = value;
+    }
+
+    public static String getRightNightChoice(){
+        return rightNightChoise[DayCount.getDay()];
+    }
+
+    public static String getNightQuestion() {
+        return nightQuestion[DayCount.getDay()];
     }
 }
