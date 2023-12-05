@@ -52,7 +52,7 @@
             <Button mnemonicParsing="false" onAction="#goSchool" text="Go school" />
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
-            <Button mnemonicParsing="false" text="Begin activity" />
+            <Button mnemonicParsing="false" text="Begin activity" onAction="#beginActivity"/>
             <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
             </fx:include>
             <fx:include source="ButtonsAndPanes/grabItem.fxml">
