@@ -40,7 +40,7 @@
       </Pane>
       <ImageView fitHeight="360.0" fitWidth="341.0" layoutX="130.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@houseEntry.png" />
+            <Image url="@billeder/houseEntry.png" />
          </image>
       </ImageView>
       <VBox prefHeight="342.0" prefWidth="128.0" spacing="3.0">
@@ -53,7 +53,7 @@
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
             <Button mnemonicParsing="false" text="Begin activity" />
-            <fx:include source="grabItem.fxml">
+            <fx:include source="ButtonsAndPanes/grabItem.fxml">
             </fx:include>
             <Button mnemonicParsing="false" text="Use insulin Iinjector" />
          </children>
@@ -89,7 +89,7 @@
                   <Font size="10.0" />
                </font></Button>
             <Label text="Inventory:" textFill="WHITE" />
-            <fx:include source="gridPane.fxml">
+            <fx:include source="ButtonsAndPanes/gridPane.fxml">
             </fx:include>
          </children>
       </VBox>
