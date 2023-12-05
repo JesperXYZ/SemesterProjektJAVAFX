@@ -69,14 +69,16 @@
             <HBox prefHeight="0.0" prefWidth="100.0">
                <children>
                   <Label text="Day: " textFill="WHITE" />
-                  <Label text="getDayCount" textFill="WHITE" />
+                  <fx:include source="ButtonsAndPanes/dayCount.fxml">
+                  </fx:include>
                </children>
             </HBox>
             <Label alignment="CENTER" prefHeight="6.0" prefWidth="125.0" text="_________________________" textAlignment="CENTER" textFill="WHITE" />
             <HBox prefHeight="21.0" prefWidth="128.0">
                <children>
-                  <Label text="Hunger:" textFill="WHITE" />
-                  <Label text=" TAL" textFill="WHITE" />
+                  <Label text="Hunger: " textFill="WHITE" />
+                  <fx:include source="ButtonsAndPanes/hungerLevel.fxml">
+                  </fx:include>
                </children>
             </HBox>
             <ProgressBar prefWidth="200.0" progress="0.0" />
