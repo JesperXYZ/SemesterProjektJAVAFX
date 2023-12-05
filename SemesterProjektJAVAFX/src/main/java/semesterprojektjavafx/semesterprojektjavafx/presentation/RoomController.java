@@ -37,6 +37,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("corridor");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goHouseEntry(ActionEvent event) throws IOException {
@@ -52,6 +53,7 @@ public class RoomController {
         else {
             Game.context.transition("home");
         }
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goGarden(ActionEvent event) throws IOException {
@@ -61,6 +63,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("garden");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goKitchen(ActionEvent event) throws IOException {
@@ -70,6 +73,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("kitchen");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goBedroom(ActionEvent event) throws IOException {
@@ -79,6 +83,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("bedroom");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goClub(ActionEvent event) throws IOException {
@@ -88,6 +93,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("club");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goBirthdayParty(ActionEvent event) throws IOException {
@@ -97,6 +103,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("birthdayParty");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goSchool(ActionEvent event) throws IOException {
@@ -106,6 +113,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("school");
+        AvailabilityController.updateAvailableItems();
     }
     @FXML
     void goFootball(ActionEvent event) throws IOException {
@@ -115,6 +123,7 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("football");
+        AvailabilityController.updateAvailableItems();
     }
 
     @FXML
