@@ -1,12 +1,15 @@
 package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 
 import java.io.IOException;
@@ -112,5 +115,21 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("football");
+    }
+
+    @FXML
+    void beginActevity(ActionEvent event) throws IOException{
+       // if (Context.getCurrent()!= null && Context.getCurrentActivity() != null) {
+        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+      /*  } if(Context.getCurrent()==null){
+          System.out.println("Current = null");
+        } if(Context.getCurrent()!=null && Context.getCurrentActivity()==null){
+            System.out.println("Activity = null");
+        }*/
+
     }
 }

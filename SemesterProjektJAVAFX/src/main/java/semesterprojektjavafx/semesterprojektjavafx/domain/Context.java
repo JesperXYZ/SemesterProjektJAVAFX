@@ -19,7 +19,8 @@ public class Context {
 
   public static ArrayList<String> getCurrentInventory(){ return Inventory.inventoryStorage;}
 
-  public static String getCurrentActivity(){
+  public static String
+  getCurrentActivity(){
     return current.activity;
   }
 

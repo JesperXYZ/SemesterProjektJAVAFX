@@ -6,13 +6,13 @@ public class CommandBegin extends BaseCommand implements Command {
     static Scanner  scanner  = new Scanner(System.in);
     boolean activityDone = false;
     String[] activity = {"school", "work", "football", "gardening", "birthday", "clubbing"};
-    String[] begun = {"you have begun school!",
+    static String[] begun = {"you have begun school!",
             "you have begun work!",
             "you have begun football!",
             "you have begun gardening!",
             "you have antended your friend Matts birthday!",
             "you went to Proud Mary!"};
-    String[] question = {"you have a break, what do you do in your break?",
+    static String[] question = {"you have a break, what do you do in your break?",
             "you are at work, what do you want to do?",
             "what mindset do you have?",
             "your mom need you to help gardening for 7 hours! what do you do?",
@@ -148,5 +148,13 @@ public class CommandBegin extends BaseCommand implements Command {
         if(!activity.equals(this.activity[day]) && !activity.equals("sleep") || !activity.equals(Context.getCurrentActivity())){
             System.out.println("you can't do this activity");
         }
+    }
+
+    public static String getBegun() {
+        return begun[DayCount.getDay()];
+    }
+
+    public static String getQuestion() {
+        return question[DayCount.getDay()];
     }
 }
