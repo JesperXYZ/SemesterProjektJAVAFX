@@ -26,6 +26,7 @@ public class RoomController {
     private static final String BIRTHDAYPARTY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/birthdayParty.fxml";
     private static final String SCHOOL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/school.fxml";
     private static final String FOOTBALL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/football.fxml";
+    private static final String WORK_FILE = "/semesterprojektjavafx/semesterprojektjavafx/work.fxml";
 
     Stage stage;
     Scene scene;
@@ -116,6 +117,15 @@ public class RoomController {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("football");
+    }
+    @FXML
+    void goWork(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource(WORK_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        Game.context.transition("work");
     }
 
     @FXML

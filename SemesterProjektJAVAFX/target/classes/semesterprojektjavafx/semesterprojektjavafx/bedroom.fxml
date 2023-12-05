@@ -1,19 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.stage.*?>
+<?import javafx.scene.text.*?>
 
-
-<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.RoomController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.RoomController">
     <children>
-        <Label text="The Bedroom" />
-        <Button mnemonicParsing="false" onAction="#goCorridor" text="Go corridor" />
-        <SubScene id="corridor" height="400.0" width="600.0">
-            <root>
-                <Region />
-            </root>
-        </SubScene>
+        <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false">
+            <image>
+                <Image url="@billeder/blackscreen.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="360.0" fitWidth="341.0" layoutX="130.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@billeder/bedroom.png" />
+            </image>
+        </ImageView>
+        <VBox prefHeight="342.0" prefWidth="128.0" spacing="3.0">
+            <children>
+                <Label text="Current exits:" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#goCorridor" text="Go corridor" />
+                <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
+                <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
+                <fx:include source="ButtonsAndPanes/grabItem.fxml">
+                </fx:include>
+                <fx:include source="ButtonsAndPanes/Use.fxml">
+                </fx:include>
+            </children>
+            <padding>
+                <Insets left="2.0" />
+            </padding>
+        </VBox>
+        <VBox layoutX="472.0" prefHeight="400.0" prefWidth="128.0">
+            <children>
+                <HBox prefHeight="0.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Day: " textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Label>
+                        <fx:include source="ButtonsAndPanes/dayCount.fxml">
+                        </fx:include>
+                    </children>
+                </HBox>
+                <Label alignment="CENTER" prefHeight="6.0" prefWidth="125.0" text="_________________________" textAlignment="CENTER" textFill="WHITE" />
+                <HBox prefHeight="21.0" prefWidth="128.0">
+                    <children>
+                        <Label text="Hunger: " textFill="WHITE" />
+                        <fx:include source="ButtonsAndPanes/hungerLevel.fxml">
+                        </fx:include>
+                    </children>
+                </HBox>
+                <HBox prefHeight="21.0" prefWidth="128.0">
+                    <children>
+                        <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
+                        </fx:include>
+                    </children>
+                </HBox>
+                <fx:include source="ButtonsAndPanes/GetGlucoseLevel.fxml">
+                </fx:include>
+                <Label text="Inventory:" textFill="WHITE" />
+                <fx:include source="ButtonsAndPanes/gridPane.fxml">
+                </fx:include>
+            </children>
+        </VBox>
+        <Label alignment="CENTER" layoutX="200.0" prefHeight="26.0" prefWidth="200.0" text="The Bedroom" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
     </children>
-</VBox>
+</AnchorPane>
