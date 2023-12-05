@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.CommandBegin;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 
@@ -127,18 +128,34 @@ public class RoomController {
     }
 
     @FXML
-    void beginActevity(ActionEvent event) throws IOException{
-       // if (Context.getCurrent()!= null && Context.getCurrentActivity() != null) {
-        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-      /*  } if(Context.getCurrent()==null){
-          System.out.println("Current = null");
-        } if(Context.getCurrent()!=null && Context.getCurrentActivity()==null){
-            System.out.println("Activity = null");
-        }*/
+    void beginActivity(ActionEvent event) throws IOException {
+        if (Context.getCurrent() != null) {
+            if (Context.getCurrentActivity() != null) {
+                if (Context.getCurrentActivity().equals(CommandBegin.getActivity())) {
+                    root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                }
+                if (Context.getCurrentActivity().equals("sleep")) {
+                    if (CommandBegin.getActivityDone() == true) {
+                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/sleep.fxml")));
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
 
+                    }else{
+                        System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
+                    }
+                }
+                System.out.println("You can't do this activity today");
+            }else{
+                System.out.println("No activity here");
+            }
+        }else {
+            System.out.println("Current==null");
+        }
     }
 }
