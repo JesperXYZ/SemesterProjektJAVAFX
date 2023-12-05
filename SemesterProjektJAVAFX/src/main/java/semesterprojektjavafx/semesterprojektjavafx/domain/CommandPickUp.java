@@ -15,7 +15,7 @@ public class CommandPickUp extends BaseCommand implements Command{
         }
         grabWhat(parameters[0]);
     }
-    public void grabWhat (String item) {
+    public static void grabWhat(String item) {
 
         String[] iInventory = Context.getCurrentAvailableItems();
         String iItem = item;
