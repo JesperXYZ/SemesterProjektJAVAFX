@@ -8,10 +8,10 @@
 <?import javafx.scene.text.Font?>
 
 <HBox prefHeight="21.0" prefWidth="128.0"
-      fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.ItemUsageController" xmlns:fx="http://javafx.com/fxml/1" >
+      fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.GlucoseLabelController" xmlns:fx="http://javafx.com/fxml/1" >
     <children>
-        <Label text="Glucose Level:" textFill="White" />
-        <Label text=" TAL" textFill="White" />
+        <Label fx:id="label1" textFill="White" />
+        <Label fx:id="label2" textFill="White" />
 
     </children>
 </HBox>

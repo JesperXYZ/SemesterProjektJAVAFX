@@ -81,12 +81,8 @@
             </HBox>
             <ProgressBar prefWidth="200.0" progress="0.0" />
             <ProgressBar prefWidth="200.0" progress="0.0" />
-            <HBox prefHeight="21.0" prefWidth="128.0">
-               <children>
-                  <Label text="Glucose Level:" textFill="WHITE" />
-                  <Label text=" TAL" textFill="WHITE" />
-               </children>
-            </HBox>
+            <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
+            </fx:include>
             <fx:include source="ButtonsAndPanes/GetGlucoseLevel.fxml">
             </fx:include>
             <Label text="Inventory:" textFill="WHITE" />
