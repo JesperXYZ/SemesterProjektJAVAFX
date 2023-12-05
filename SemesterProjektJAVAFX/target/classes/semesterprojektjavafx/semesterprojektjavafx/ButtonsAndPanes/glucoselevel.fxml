@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="21.0" prefWidth="128.0"
+      fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.ItemUsageController" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <Label text="Glucose Level:" textFill="White" />
+        <Label text=" TAL" textFill="White" />
+
+    </children>
+</HBox>

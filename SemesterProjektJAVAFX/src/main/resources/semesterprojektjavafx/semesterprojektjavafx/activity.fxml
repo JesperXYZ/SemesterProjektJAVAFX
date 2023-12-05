@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.QandAController">
+   <children>
+      <Label fx:id="activityLabel" layoutX="54.0" layoutY="79.0" prefHeight="42.0" prefWidth="491.0" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="choice1" layoutX="147.0" layoutY="246.0" mnemonicParsing="false" onAction="#picked1"/>
+      <Button fx:id="choice2" layoutX="415.0" layoutY="246.0" mnemonicParsing="false" onAction="#picked2"/>
+   </children>
+</AnchorPane>
