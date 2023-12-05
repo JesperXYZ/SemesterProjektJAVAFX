@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<MenuButton mnemonicParsing="false" text="Grab items" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.AvailabilityController">
+  <items>
+    <MenuItem text="menuItem1"></MenuItem>
+    <MenuItem text="menuItem2"></MenuItem>
+    <MenuItem text="menuItem3"></MenuItem>
+    <MenuItem text="menuItem4"></MenuItem>
+  </items>
+</MenuButton>
