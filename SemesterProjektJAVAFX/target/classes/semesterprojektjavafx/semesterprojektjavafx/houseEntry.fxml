@@ -52,10 +52,13 @@
             <Button mnemonicParsing="false" onAction="#goSchool" text="Go school" />
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
-            <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
+            <Button mnemonicParsing="false" text="Begin activity" />
+            <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
+            </fx:include>
             <fx:include source="ButtonsAndPanes/grabItem.fxml">
             </fx:include>
-            <Button mnemonicParsing="false" text="Use insulin Iinjector" />
+            <fx:include source="ButtonsAndPanes/Use.fxml">
+            </fx:include>
          </children>
          <padding>
             <Insets left="2.0" />
@@ -84,10 +87,8 @@
                   <Label text=" TAL" textFill="WHITE" />
                </children>
             </HBox>
-            <Button mnemonicParsing="false" text="Get Glucose Level (requires glucose meter)" textAlignment="CENTER" wrapText="true">
-               <font>
-                  <Font size="10.0" />
-               </font></Button>
+            <fx:include source="ButtonsAndPanes/GetGlucoseLevel.fxml">
+            </fx:include>
             <Label text="Inventory:" textFill="WHITE" />
             <fx:include source="ButtonsAndPanes/gridPane.fxml">
             </fx:include>
