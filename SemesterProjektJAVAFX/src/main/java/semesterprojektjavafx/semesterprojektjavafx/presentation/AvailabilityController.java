@@ -26,33 +26,33 @@ public class AvailabilityController {
     MenuButton availableItems;
     public void initialize() {
         availableItems.setText("Available items");
+        item1.setDisable(true);
+        item2.setVisible(false);
+        item3.setVisible(false);
+        item4.setVisible(false);
+        item1.setText("No items are currently available");
+
         if(Objects.equals(Game.context.getCurrent().getName(), "The Bedroom"))
         {
-            item1.setText("Glucose meter");
-            item2.setText("Insulin injector");
             item1.setVisible(true);
             item2.setVisible(true);
             item3.setVisible(false);
             item4.setVisible(false);
+            item1.setText("Glucose meter");
+            item2.setText("Insulin injector");
+            item1.setDisable(false);
         }
         if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
         {
-            item1.setText("Milk (250 ml)");
-            item2.setText("Almonds (15 g)");
-            item3.setText("Ice tea (250 ml)");
-            item4.setText("Apple (110)");
             item1.setVisible(true);
             item2.setVisible(true);
             item3.setVisible(true);
             item4.setVisible(true);
-        }
-        else
-        {
-            item1.setText("No items are currently available");
-            item1.setDisable(true);
-            item2.setVisible(false);
-            item3.setVisible(false);
-            item4.setVisible(false);
+            item1.setText("Milk (250 ml)");
+            item2.setText("Almonds (15 g)");
+            item3.setText("Ice tea (250 ml)");
+            item4.setText("Apple (110)");
+            item1.setDisable(false);
         }
     }
     @FXML

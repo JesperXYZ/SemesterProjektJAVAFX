@@ -33,20 +33,15 @@ public class RoomController {
     Parent root;
     @FXML
     void goCorridor(ActionEvent event) throws IOException {
+        Game.context.transition("corridor");
         root = FXMLLoader.load(getClass().getResource(CORRIDOR_FILE));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("corridor");
     }
     @FXML
     void goHouseEntry(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource(HOUSEENTRY_FILE));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
         if(Objects.equals(Game.context.getCurrent().getName(), "The Corridor"))
         {
             Game.context.transition("houseEntry");
@@ -54,78 +49,83 @@ public class RoomController {
         else {
             Game.context.transition("home");
         }
+        root = FXMLLoader.load(getClass().getResource(HOUSEENTRY_FILE));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     @FXML
     void goGarden(ActionEvent event) throws IOException {
+        Game.context.transition("garden");
         root = FXMLLoader.load(getClass().getResource(GARDEN_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("garden");
     }
     @FXML
     void goKitchen(ActionEvent event) throws IOException {
+        Game.context.transition("kitchen");
         root = FXMLLoader.load(getClass().getResource(KITCHEN_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("kitchen");
     }
     @FXML
     void goBedroom(ActionEvent event) throws IOException {
+        Game.context.transition("bedroom");
         root = FXMLLoader.load(getClass().getResource(BEDROOM_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("bedroom");
     }
     @FXML
     void goClub(ActionEvent event) throws IOException {
+        Game.context.transition("club");
         root = FXMLLoader.load(getClass().getResource(CLUB_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("club");
     }
     @FXML
     void goBirthdayParty(ActionEvent event) throws IOException {
+        Game.context.transition("birthdayParty");
         root = FXMLLoader.load(getClass().getResource(BIRTHDAYPARTY_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("birthdayParty");
     }
     @FXML
     void goSchool(ActionEvent event) throws IOException {
+        Game.context.transition("school");
         root = FXMLLoader.load(getClass().getResource(SCHOOL_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("school");
     }
     @FXML
     void goFootball(ActionEvent event) throws IOException {
+        Game.context.transition("football");
         root = FXMLLoader.load(getClass().getResource(FOOTBALL_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("football");
     }
     @FXML
     void goWork(ActionEvent event) throws IOException {
+        Game.context.transition("work");
         root = FXMLLoader.load(getClass().getResource(WORK_FILE));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("work");
     }
 
     @FXML
