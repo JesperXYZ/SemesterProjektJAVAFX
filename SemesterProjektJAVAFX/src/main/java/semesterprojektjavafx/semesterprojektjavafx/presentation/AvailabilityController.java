@@ -19,24 +19,25 @@ public class AvailabilityController {
     @FXML
     Label hungerLevel = new Label(""+ ItemsDescription.getHungerLevelInt());
     @FXML
-    static MenuItem item1 = new MenuItem("");
+    MenuItem item1;
     @FXML
-    static MenuItem item2 = new MenuItem("");
+    MenuItem item2;
     @FXML
-    static MenuItem item3 = new MenuItem("");
+    MenuItem item3;
     @FXML
-    static MenuItem item4 = new MenuItem("");
+    MenuItem item4;
     @FXML
-    MenuButton availableItems = new MenuButton("Available items");
-
-
-    public static void updateAvailableItems() {
+    MenuButton availableItems;
+    public void initialize() {
+        availableItems.setText("Available items");
         if(Objects.equals(Game.context.getCurrent().getName(), "The Bedroom"))
         {
             item1.setText("Glucose meter");
             item2.setText("Insulin injector");
-            item3.disableProperty();
-            item4.disableProperty();
+            item1.setVisible(true);
+            item2.setVisible(true);
+            item3.setVisible(false);
+            item4.setVisible(false);
         }
         if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
         {
@@ -44,17 +45,20 @@ public class AvailabilityController {
             item2.setText("Almonds (15 g)");
             item3.setText("Ice tea (250 ml)");
             item4.setText("Apple (110)");
+            item1.setVisible(true);
+            item2.setVisible(true);
+            item3.setVisible(true);
+            item4.setVisible(true);
         }
         else
         {
-            item1.disableProperty();
-            item2.disableProperty();
-            item3.disableProperty();
-            item4.disableProperty();
+            item1.setText("No items are currently available");
+            item1.setDisable(true);
+            item2.setVisible(false);
+            item3.setVisible(false);
+            item4.setVisible(false);
         }
     }
-
-
     @FXML
     void grabItem1(ActionEvent event) throws IOException
     {
