@@ -9,6 +9,6 @@ public class HungerLevelController {
     @FXML
     Label hungerLevel;
     public void initialize() {
-        hungerLevel.setText(""+ ItemsDescription.getHungerLevelInt());
+        hungerLevel.setText(""+ ItemsDescription.getHungerLevel());
     }
 }
