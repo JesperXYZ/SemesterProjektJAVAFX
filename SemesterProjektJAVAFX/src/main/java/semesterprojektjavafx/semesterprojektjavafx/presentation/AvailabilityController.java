@@ -15,10 +15,6 @@ import java.util.Objects;
 
 public class AvailabilityController {
     @FXML
-    Label dayCount = new Label(""+DayCount.getDay());
-    @FXML
-    Label hungerLevel = new Label(""+ ItemsDescription.getHungerLevelInt());
-    @FXML
     MenuItem item1;
     @FXML
     MenuItem item2;
