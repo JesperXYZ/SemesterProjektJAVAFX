@@ -53,18 +53,8 @@
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
             <Button mnemonicParsing="false" text="Begin activity" />
-            <MenuButton mnemonicParsing="false" text="Grab item">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Item 1" />
-                <MenuItem mnemonicParsing="false" text="Item 2" />
-              </items>
-            </MenuButton>
-            <MenuButton mnemonicParsing="false" text="Consume item">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Inventory 1" />
-                <MenuItem mnemonicParsing="false" text="Inventory 2" />
-              </items>
-            </MenuButton>
+            <fx:include source="grabItem.fxml">
+            </fx:include>
             <Button mnemonicParsing="false" text="Use insulin Iinjector" />
          </children>
          <padding>
