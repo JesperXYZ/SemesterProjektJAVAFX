@@ -15,7 +15,7 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
 
 import java.io.IOException;
 
-public class GameController extends Application {
+public class GameLauncher extends Application {
 
     private static final String HOUSEENTRY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml";
     private static final String CORRIDOR_FILE = "/semesterprojektjavafx/semesterprojektjavafx/corridor.fxml";
