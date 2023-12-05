@@ -28,8 +28,6 @@
             <Button mnemonicParsing="false" onAction="#goFootball" text="Go football" />
             <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
             <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
-            <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
-            </fx:include>
             <fx:include source="ButtonsAndPanes/grabItem.fxml">
             </fx:include>
             <fx:include source="ButtonsAndPanes/Use.fxml">
@@ -60,10 +58,12 @@
                   </fx:include>
                </children>
             </HBox>
-            <ProgressBar prefWidth="200.0" progress="0.0" />
-            <ProgressBar prefWidth="200.0" progress="0.0" />
-            <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
-            </fx:include>
+            <HBox prefHeight="21.0" prefWidth="128.0">
+               <children>
+                  <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
+                  </fx:include>
+               </children>
+            </HBox>
             <fx:include source="ButtonsAndPanes/GetGlucoseLevel.fxml">
             </fx:include>
             <Label text="Inventory:" textFill="WHITE" />
