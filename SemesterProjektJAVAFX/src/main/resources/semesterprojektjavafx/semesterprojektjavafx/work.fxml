@@ -15,7 +15,7 @@
         </ImageView>
         <ImageView fitHeight="360.0" fitWidth="341.0" layoutX="130.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@billeder/blackscreen.png" />
+                <Image url="@billeder/work.png" />
             </image>
         </ImageView>
         <VBox prefHeight="342.0" prefWidth="128.0" spacing="3.0">
@@ -67,7 +67,7 @@
                 </fx:include>
             </children>
         </VBox>
-        <Label alignment="CENTER" layoutX="200.0" prefHeight="26.0" prefWidth="200.0" text="The Club" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="200.0" prefHeight="26.0" prefWidth="200.0" text="Work" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="22.0" />
             </font>
