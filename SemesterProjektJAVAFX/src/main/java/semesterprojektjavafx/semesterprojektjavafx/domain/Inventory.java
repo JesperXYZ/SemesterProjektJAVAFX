@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Inventory {
 
-    static ArrayList<String> inventoryStorage = new ArrayList<>();
+    public static ArrayList<String> inventoryStorage = new ArrayList<>();
 
 
     public static void printInventory() {
