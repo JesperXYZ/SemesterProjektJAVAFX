@@ -93,4 +93,8 @@ public class ItemsDescription {
     public static void setHungerLevel(double i){
         hungerLevel += i;
     }
+
+    public static double getHungerLevelInt(){
+        return hungerLevel;
+    }
 }

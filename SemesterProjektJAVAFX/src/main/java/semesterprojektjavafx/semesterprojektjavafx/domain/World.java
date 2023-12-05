@@ -2,9 +2,9 @@ package semesterprojektjavafx.semesterprojektjavafx.domain;/*/* World class for 
 * */
 
 
-public class World {
+class World {
   static Space entry;
-  World () {
+  public World() {
 
     Space houseEntry  = new Space("House entry", new String[]{""}, null);
     Space kitchen   = new Space("The Kitchen", new String[]{"apple", "ice tea", "milk", "almonds"}, null);
@@ -48,7 +48,7 @@ public class World {
     this.entry = houseEntry;
 
   }
-  static Space getEntry () {
+  public static Space getEntry() {
     return entry;
   }
 }

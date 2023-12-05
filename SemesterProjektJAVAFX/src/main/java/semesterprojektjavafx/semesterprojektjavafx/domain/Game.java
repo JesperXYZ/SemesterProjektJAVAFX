@@ -3,9 +3,9 @@ package semesterprojektjavafx.semesterprojektjavafx.domain;/* Main class for lau
 
 import java.util.Scanner;
 
-class Game {
+public class Game {
   static World world    = new World();
-  static Context  context  = new Context(world.getEntry());
+  public static Context  context  = new Context(world.getEntry());
   static Command  fallback = new CommandUnknown();
   static Registry registry = new Registry(context, fallback);
   static Scanner  scanner  = new Scanner(System.in);

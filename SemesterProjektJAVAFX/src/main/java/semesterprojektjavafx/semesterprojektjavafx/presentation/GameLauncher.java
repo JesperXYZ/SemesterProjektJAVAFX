@@ -1,19 +1,15 @@
 package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
+import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
+
+
 
 public class GameLauncher extends Application {
 
@@ -23,14 +19,57 @@ public class GameLauncher extends Application {
     Scene scene;
     Parent root;
 
+    // returner det nuværende rum (Space) Game.context.getCurrent();
+    // returner de tilgængelige items i rummet (String[]) Game.context.getCurrentAvailableItems();
+    // returner den tilgængelige aktivitet i rummet (String) Game.context.getCurrentActivity();
+
     @Override
     public void start(Stage stage) throws Exception {
         root = (Parent) FXMLLoader.load(getClass().getResource(HOUSEENTRY_FILE));
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        /*game = FXMLLoader.load(getClass().getResource(HOUSEENTRY_FILE));
-        game.show();*/
+        Game.context.transition("houseEntry");
+        /*
+        boolean hungerLevelLow = false, hugerLevelHigh = false, glucoseLevelLow = false, glucoseLevelHigh = false;
+        boolean win = false;
+        while (Game.context.isDone() == false && win == false && hungerLevelLow == false && hugerLevelHigh == false && glucoseLevelLow == false && glucoseLevelHigh == false) {
+            if (ItemsDescription.getHungerLevelInt() <= 0) {
+                hungerLevelLow = true;
+            }
+            if (ItemsDescription.getHungerLevelInt() > 10) {
+                hugerLevelHigh = true;
+            }
+            if (ItemsDescription.getGlucoseLevel() <= 3) {
+                glucoseLevelLow = true;
+            }
+            if (ItemsDescription.getGlucoseLevel() >= 8) {
+                glucoseLevelHigh = true;
+            }
+            if (DayCount.getDay() == 6) {
+                win = true;
+            }
+            if (hungerLevelLow == true) {
+                //go EndScreen
+                Context.makeDone();
+            }
+            if (hugerLevelHigh == true) {
+                //go EndScreen
+                Context.makeDone();
+            }
+            if (glucoseLevelLow == true) {
+                //go EndScreen
+                Context.makeDone();
+            }
+            if (glucoseLevelHigh == true) {
+                //go EndScreen
+                Context.makeDone();
+            }
+            if (win == true) {
+                //go EndScreen
+                Context.makeDone();
+            }
+        }*/
     }
     public static void main(String[] args){
         launch(args);

@@ -7,7 +7,7 @@ public class Context {
   static Space current;
   static boolean done = false;
   
-  Context (Space node) {current = node;}
+  public Context(Space node) {current = node;}
   
   public static Space getCurrent() {
     return current;
@@ -38,7 +38,7 @@ public class Context {
     done = true;
   }
   
-  public boolean isDone () {
+  public static boolean isDone() {
     return done;
   }
 

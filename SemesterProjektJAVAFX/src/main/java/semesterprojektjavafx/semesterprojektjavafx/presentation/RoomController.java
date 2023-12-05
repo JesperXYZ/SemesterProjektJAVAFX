@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 
 import java.io.IOException;
 
@@ -31,6 +32,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("corridor");
     }
     @FXML
     void goHouseEntry(ActionEvent event) throws IOException {
@@ -39,6 +41,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("houseEntry");
     }
     @FXML
     void goGarden(ActionEvent event) throws IOException {
@@ -47,6 +50,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("garden");
     }
     @FXML
     void goKitchen(ActionEvent event) throws IOException {
@@ -55,6 +59,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("kitchen");
     }
     @FXML
     void goBedroom(ActionEvent event) throws IOException {
@@ -63,6 +68,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("bedroom");
     }
     @FXML
     void goClub(ActionEvent event) throws IOException {
@@ -71,6 +77,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("club");
     }
     @FXML
     void goBirthdayParty(ActionEvent event) throws IOException {
@@ -79,6 +86,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("birthdayParty");
     }
     @FXML
     void goSchool(ActionEvent event) throws IOException {
@@ -87,6 +95,7 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("school");
     }
     @FXML
     void goFootball(ActionEvent event) throws IOException {
@@ -95,5 +104,6 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        Game.context.transition("football");
     }
 }
