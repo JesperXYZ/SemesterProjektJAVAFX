@@ -24,9 +24,10 @@ public class CommandBegin extends BaseCommand implements Command {
             "help or leave",
             "brunsviger or Kitkat",
             "beer or vodkajuice"};
-    String[] choice1 = {"basket", "grind", "loser", "help", "brunsviger", "beer"};
-    String[] choice2 = {"chillaxing", "browse", "ronaldo", "leave", "KitKat", "vodkajuice"};
-    double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-5,-3,-5},{-3,-5,0,0},{3,2,3,1},{1,-3,3,0}};
+    static String[] choice1 = {"basket", "grind", "loser", "help", "brunsviger", "beer"};
+    static String[] choice2 = {"chillaxing", "browse", "ronaldo", "leave", "KitKat", "vodkajuice"};
+    static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-5,-3,-5},{-3,-5,0,0},{3,2,3,1},{1,-3,3,0}};
+    //0=glucose1 1=hunger1 2=glucose2 3=hunger2
 
     String[] nightQuestion = {"Question of the day\n" +
                 "Which of these lower your blood sugar?\n" +
@@ -156,5 +157,26 @@ public class CommandBegin extends BaseCommand implements Command {
 
     public static String getQuestion() {
         return question[DayCount.getDay()];
+    }
+
+    public static String getChoice1() {
+        return choice1[DayCount.getDay()];
+    }
+
+    public static String getChoice2() {
+        return choice2[DayCount.getDay()];
+    }
+
+    public static double getGlucose1(){
+        return setLevel[DayCount.getDay()][0];
+    }
+    public static double getGlucose2(){
+        return setLevel[DayCount.getDay()][2];
+    }
+    public static double getHuger1(){
+        return setLevel[DayCount.getDay()][1];
+    }
+    public static double getHuger2(){
+        return setLevel[DayCount.getDay()][3];
     }
 }
