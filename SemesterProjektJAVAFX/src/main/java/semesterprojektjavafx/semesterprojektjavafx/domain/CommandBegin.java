@@ -31,7 +31,7 @@ public class CommandBegin extends BaseCommand implements Command {
 
     static String[] nightQuestion = {"Question of the day\n" +
                 "Which of these lower your blood sugar?\n" +
-                "Physical activity, food and drinks, using insulin, sleeping\n" +
+                "Physical activity, food and drinks, public speaking, sleeping\n" +
                 "Pick 1, 2, 3 or 4\n",
             "Question of the day\n" +
                     "What do you blood sugar level have to be to maintain a normal level?\n" +
