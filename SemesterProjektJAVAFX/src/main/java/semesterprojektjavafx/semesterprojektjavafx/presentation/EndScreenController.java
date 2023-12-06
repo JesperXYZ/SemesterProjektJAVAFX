@@ -70,6 +70,12 @@ public class EndScreenController {
         } else if(Context.getCurrent().getName()=="The Garden"){
             Game.context.transition("corridor");
             Game.context.transition("houseEntry");
+        } else if(Context.getCurrent().getName()=="The Bedroom") {
+            Game.context.transition("corridor");
+            Game.context.transition("houseEntry");
+        } else if(Context.getCurrent().getName()=="The Kitchen") {
+            Game.context.transition("corridor");
+            Game.context.transition("houseEntry");
         }
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
