@@ -13,7 +13,7 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.ItemsDescription;
 import java.io.IOException;
 import java.util.Objects;
 
-public class AvailabilityController {
+public class AvailabilityController extends ItemConsumptionController {
     @FXML
     MenuItem item1;
     @FXML
@@ -55,6 +55,7 @@ public class AvailabilityController {
             item1.setDisable(false);
         }
     }
+
     @FXML
     void grabItem1(ActionEvent event) throws IOException
     {
@@ -65,8 +66,10 @@ public class AvailabilityController {
         if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
         {
             CommandPickUp.grabWhat("milk");
+            updateItemVisibilityAll();
         }
     }
+
     @FXML
     void grabItem2(ActionEvent event) throws IOException
     {
@@ -78,6 +81,7 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("almonds");
         }
+        updateItemVisibilityAll();
     }
     @FXML
     void grabItem3(ActionEvent event) throws IOException
@@ -86,6 +90,7 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("ice tea");
         }
+        updateItemVisibilityAll();
     }
     @FXML
     void grabItem4(ActionEvent event) throws IOException
@@ -94,5 +99,6 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("apple");
         }
+        updateItemVisibilityAll();
     }
 }

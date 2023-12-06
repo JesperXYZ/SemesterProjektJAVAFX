@@ -31,6 +31,8 @@
                 </fx:include>
                 <fx:include source="ButtonsAndPanes/Use.fxml">
                 </fx:include>
+                <fx:include source="ButtonsAndPanes/consumeItem.fxml">
+                </fx:include>
             </children>
             <padding>
                 <Insets left="2.0" />

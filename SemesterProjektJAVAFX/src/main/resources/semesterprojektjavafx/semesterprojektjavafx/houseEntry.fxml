@@ -33,7 +33,8 @@
             </fx:include>
             <fx:include source="ButtonsAndPanes/Use.fxml">
             </fx:include>
-            <ChoiceBox prefWidth="150.0" />
+            <fx:include source="ButtonsAndPanes/consumeItem.fxml">
+            </fx:include>
          </children>
          <padding>
             <Insets left="2.0" />

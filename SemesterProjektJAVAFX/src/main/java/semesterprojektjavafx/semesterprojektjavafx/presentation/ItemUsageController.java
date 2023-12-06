@@ -29,7 +29,7 @@ public class ItemUsageController {
     void UseGlucoseMeter(ActionEvent event){
     //if (Inventory.inventoryStorage.contains("glucosemeter"));
             label.setText(" "+glucoselevel);
-        }
+    }
 
 
     }
