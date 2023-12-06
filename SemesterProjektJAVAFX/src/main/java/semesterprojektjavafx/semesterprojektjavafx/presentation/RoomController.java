@@ -29,7 +29,6 @@ public class RoomController {
     private static final String SCHOOL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/school.fxml";
     private static final String FOOTBALL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/football.fxml";
     private static final String WORK_FILE = "/semesterprojektjavafx/semesterprojektjavafx/work.fxml";
-    private static final String SLEEP_FILE = "semesterprojektjavafx/semesterprojektjavafx/sleep.fxml";
 
     Stage stage;
     Scene scene;
