@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.scene.effect.DropShadow?>
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.RoomController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="false">
@@ -80,5 +81,9 @@
                 </fx:include>
             </children>
         </HBox>
+        <Label fx:id="errorLabel" alignment="CENTER" layoutX="162.0" layoutY="191.0" prefHeight="18.0" prefWidth="276.0" textFill="WHITE">
+            <effect>
+                <DropShadow height="9.36" radius="4.165" spread="1.0" width="9.3" />
+            </effect></Label>
     </children>
 </AnchorPane>
