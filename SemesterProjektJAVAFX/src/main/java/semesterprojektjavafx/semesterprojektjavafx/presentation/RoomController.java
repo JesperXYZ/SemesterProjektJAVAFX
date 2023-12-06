@@ -1,5 +1,6 @@
 package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
+import javafx.animation.PauseTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,12 +10,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Objects;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class RoomController {
     private static final String HOUSEENTRY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml";
@@ -184,8 +189,20 @@ public class RoomController {
         }
     }
 
+    @FXML private Label errorLabel;
+
+    private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    public void showErrorAndClear(String message, long time){
+        errorLabel.setText(message);
+
+        scheduler.schedule(()->{
+            Platform.runLater(()->{errorLabel.setText("");});}, time, TimeUnit.MICROSECONDS);
+    }
+    /*public void shutdownScheduler(){
+        scheduler.shutdown();
+    }*/
     @FXML
-    void beginActivity(ActionEvent event) throws IOException {
+    void beginActivity(ActionEvent event) throws IOException, InterruptedException {
         if (Context.getCurrent() != null) {
             if (Context.getCurrentActivity() != null) {
                 if (Context.getCurrentActivity().equals(CommandBegin.getActivity())) {
@@ -196,11 +213,13 @@ public class RoomController {
                         stage.setScene(scene);
                         stage.show();
                     }else{
+                        showErrorAndClear("You have finished todays activity",1200000);
                         System.out.println("You have finished todays activity");
                     }
                 }
                 else if (Context.getCurrentActivity().equals("sleep")) {
                     if (CommandBegin.getActivityDone() == false) {
+                        showErrorAndClear("You have to finish "+CommandBegin.getActivity()+" before you can sleep",1200000);
                         System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
                     }else{
                         root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/night.fxml")));
@@ -210,9 +229,11 @@ public class RoomController {
                         stage.show();
                     }
                 } else{
+                    showErrorAndClear("You can't do this activity today",1200000);
                     System.out.println("You can't do this activity today");
                 }
             }else{
+                showErrorAndClear("No activity here",1200000);
                 System.out.println("No activity here");
             }
         }else {
