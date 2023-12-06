@@ -2,8 +2,8 @@ package semesterprojektjavafx.semesterprojektjavafx.domain;/*/* World class for 
 * */
 
 
-class World {
-  static Space entry;
+public class World {
+  public static Space entry;
   public World() {
 
     Space houseEntry  = new Space("House entry", new String[]{""}, null);

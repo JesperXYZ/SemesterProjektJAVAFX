@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class EndScreenController {
     private Stage stage;
@@ -39,6 +38,18 @@ public class EndScreenController {
         }
     }
 
+    public void clearInventory(){
+        String[] items = {"milk", "almonds", "ice tea", "apple", "insulininjector", "glucosemeter"};
+        while (Context.getCurrentInventory().contains("milk")||Context.getCurrentInventory().contains("almonds")||Context.getCurrentInventory().contains("ice tea")||Context.getCurrentInventory().contains("apple")||Context.getCurrentInventory().contains("insulininjector")||Context.getCurrentInventory().contains("glucosemeter")) {
+            for (int i = 0; i < items.length; i++) {
+                if (Context.getCurrentInventory().contains(items[i])) {
+                    Context.getCurrentInventory().remove(items[i]);
+                    break;
+                }
+            }
+        }
+    }
+
     public void initialize() {
         String msg = (gameOverText[value()]);
         gameOverLabel.setText(msg);
@@ -50,13 +61,21 @@ public class EndScreenController {
         ItemsDescription.resetHungerLevel();
         DayCount.restDay();
         CommandBegin.setActivityDone(false);
+        clearInventory();
 
+        if(Context.getCurrent().getName()=="School"||Context.getCurrent().getName()=="Work"||Context.getCurrent().getName()=="Football"||Context.getCurrent().getName()=="Club"||Context.getCurrent().getName()=="Birthday party"){
+            Game.context.transition("home");
+        } else if(Context.getCurrent().getName()=="The Corridor"){
+            Game.context.transition("houseEntry");
+        } else if(Context.getCurrent().getName()=="The Garden"){
+            Game.context.transition("corridor");
+            Game.context.transition("houseEntry");
+        }
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        Game.context.transition("houseEntry");
     }
 
     @FXML

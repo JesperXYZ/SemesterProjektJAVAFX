@@ -28,4 +28,8 @@ public class Inventory {
             }
         }
     }
+
+    public static int getInventoryStorage(){
+        return inventoryStorage.size();
+    }
 }
