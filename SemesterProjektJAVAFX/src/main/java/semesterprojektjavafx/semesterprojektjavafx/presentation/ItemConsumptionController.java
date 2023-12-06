@@ -69,16 +69,19 @@ public class ItemConsumptionController {
         consumeItem("milk");
         reloadScene(event);
     }
+
     @FXML
     void consumeItem2(ActionEvent event) throws IOException {
         consumeItem("ice tea");
         reloadScene(event);
     }
+
     @FXML
     void consumeItem3(ActionEvent event) throws IOException {
         consumeItem("almonds");
         reloadScene(event);
     }
+
     @FXML
     void consumeItem4(ActionEvent event) throws IOException {
         consumeItem("apple");
@@ -93,10 +96,6 @@ public class ItemConsumptionController {
         updateItemVisibilityAll();
     }
 
-
-    Stage stage;
-    Scene scene;
-    Parent root;
     private void reloadScene(ActionEvent event) throws IOException {
         //Logic to convert the currentSpaceName to the absolute path of its fxml file
         Space currentSpace = Game.context.getCurrent();
@@ -104,8 +103,7 @@ public class ItemConsumptionController {
         String nameWithoutTHE;
         if (currentSpaceName.contains("The ")) {
             nameWithoutTHE = currentSpaceName.substring(4);
-        }
-        else {
+        } else {
             nameWithoutTHE = currentSpaceName;
         }
         String nameWithoutTHELowerCase = nameWithoutTHE.toLowerCase();
@@ -113,20 +111,22 @@ public class ItemConsumptionController {
         String nameWithoutTHELowerCaseWithoutSpace2;
         if (nameWithoutTHELowerCaseWithoutSpace.contains("entry")) {
             nameWithoutTHELowerCaseWithoutSpace2 = "houseEntry";
-        }
-        if (nameWithoutTHELowerCaseWithoutSpace.contains("party")) {
+        } else if (nameWithoutTHELowerCaseWithoutSpace.contains("party")) {
             nameWithoutTHELowerCaseWithoutSpace2 = "birthdayParty";
-        }
-        else {
+        } else {
             nameWithoutTHELowerCaseWithoutSpace2 = nameWithoutTHELowerCaseWithoutSpace;
         }
-        String pathName = "/semesterprojektjavafx/semesterprojektjavafx/"+nameWithoutTHELowerCaseWithoutSpace2+".fxml";
+        String pathName = "/semesterprojektjavafx/semesterprojektjavafx/" + nameWithoutTHELowerCaseWithoutSpace2 + ".fxml";
 
-        //reloads the scene to initialize the label in GlucoseLabelController immediately
-        root = FXMLLoader.load(getClass().getResource(pathName));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        // Reloads the scene to initialize the label in GlucoseLabelController immediately
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(pathName));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
         stage.setScene(scene);
         stage.show();
     }
 }
+

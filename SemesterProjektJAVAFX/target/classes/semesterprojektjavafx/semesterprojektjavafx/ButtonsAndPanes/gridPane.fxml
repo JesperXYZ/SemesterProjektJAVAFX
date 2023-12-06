@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane gridLinesVisible="true" prefHeight="183.0" prefWidth="128.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.InventoryController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-  <effect>
-  </effect>
-    <ImageView fx:id="billede1" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true"/>
-   <ImageView fx:id="billede2" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-   <ImageView fx:id="billede3" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-   <ImageView fx:id="billede4" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-   <ImageView fx:id="billede5" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-   <ImageView fx:id="billede6" fitHeight="62.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-</GridPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="183.0" prefWidth="128.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.InventoryController">
+   <children>
+      <Label fx:id="label1" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label2" layoutX="10.0" layoutY="10.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label3" layoutX="10.0" layoutY="34.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label4" layoutX="10.0" layoutY="58.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label5" layoutX="10.0" layoutY="82.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label6" layoutX="10.0" layoutY="106.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label7" layoutX="10.0" layoutY="130.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+      <Label fx:id="label8" layoutX="10.0" layoutY="10.0" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="129.0" textAlignment="JUSTIFY" textFill="WHITE" />
+
+   </children>
+</VBox>

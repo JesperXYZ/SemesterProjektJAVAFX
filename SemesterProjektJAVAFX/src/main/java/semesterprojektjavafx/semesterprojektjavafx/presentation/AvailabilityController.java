@@ -2,13 +2,14 @@ package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
-import semesterprojektjavafx.semesterprojektjavafx.domain.CommandPickUp;
-import semesterprojektjavafx.semesterprojektjavafx.domain.DayCount;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
-import semesterprojektjavafx.semesterprojektjavafx.domain.ItemsDescription;
+import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -67,6 +68,7 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("milk");
         }
+        reloadScene(event);
     }
 
     @FXML
@@ -80,6 +82,7 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("almonds");
         }
+        reloadScene(event);
     }
     @FXML
     void grabItem3(ActionEvent event) throws IOException
@@ -88,6 +91,7 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("ice tea");
         }
+        reloadScene(event);
     }
     @FXML
     void grabItem4(ActionEvent event) throws IOException
@@ -96,5 +100,38 @@ public class AvailabilityController {
         {
             CommandPickUp.grabWhat("apple");
         }
+        reloadScene(event);
+    }
+    private void reloadScene(ActionEvent event) throws IOException {
+        //Logic to convert the currentSpaceName to the absolute path of its fxml file
+        Space currentSpace = Game.context.getCurrent();
+        String currentSpaceName = currentSpace.getName();
+        String nameWithoutTHE;
+        if (currentSpaceName.contains("The ")) {
+            nameWithoutTHE = currentSpaceName.substring(4);
+        } else {
+            nameWithoutTHE = currentSpaceName;
+        }
+        String nameWithoutTHELowerCase = nameWithoutTHE.toLowerCase();
+        String nameWithoutTHELowerCaseWithoutSpace = nameWithoutTHELowerCase.replace(" ", "");
+        String nameWithoutTHELowerCaseWithoutSpace2;
+        if (nameWithoutTHELowerCaseWithoutSpace.contains("entry")) {
+            nameWithoutTHELowerCaseWithoutSpace2 = "houseEntry";
+        } else if (nameWithoutTHELowerCaseWithoutSpace.contains("party")) {
+            nameWithoutTHELowerCaseWithoutSpace2 = "birthdayParty";
+        } else {
+            nameWithoutTHELowerCaseWithoutSpace2 = nameWithoutTHELowerCaseWithoutSpace;
+        }
+        String pathName = "/semesterprojektjavafx/semesterprojektjavafx/" + nameWithoutTHELowerCaseWithoutSpace2 + ".fxml";
+
+        // Reloads the scene to initialize the label in GlucoseLabelController immediately
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(pathName));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
+        stage.setScene(scene);
+        stage.show();
     }
 }
