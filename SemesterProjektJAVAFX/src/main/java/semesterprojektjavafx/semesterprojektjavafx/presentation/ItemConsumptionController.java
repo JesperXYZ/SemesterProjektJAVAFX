@@ -67,22 +67,25 @@ public class ItemConsumptionController {
     @FXML
     void consumeItem1(ActionEvent event) throws IOException {
         consumeItem("milk");
-        reloadScene(event);
+        // reloadScene(event);
     }
+
     @FXML
     void consumeItem2(ActionEvent event) throws IOException {
         consumeItem("ice tea");
-        reloadScene(event);
+        // reloadScene(event);
     }
+
     @FXML
     void consumeItem3(ActionEvent event) throws IOException {
         consumeItem("almonds");
-        reloadScene(event);
+        // reloadScene(event);
     }
+
     @FXML
     void consumeItem4(ActionEvent event) throws IOException {
         consumeItem("apple");
-        reloadScene(event);
+        // reloadScene(event);
     }
 
     private void consumeItem(String itemName) throws IOException {
@@ -92,8 +95,8 @@ public class ItemConsumptionController {
         }
         updateItemVisibilityAll();
     }
-
-
+}
+/*
     Stage stage;
     Scene scene;
     Parent root;
@@ -130,3 +133,5 @@ public class ItemConsumptionController {
         stage.show();
     }
 }
+
+ */
