@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.QandAController">
+   <children>
+      <Label fx:id="sleepLabel" layoutX="286.0" layoutY="109.0" />
+      <Button fx:id="nightChoice1" layoutX="245.0" layoutY="258.0" mnemonicParsing="false" onAction="#nightChoice1" text="1" />
+      <Button fx:id="nightChoice2" layoutX="337.0" layoutY="258.0" mnemonicParsing="false" onAction="#nightChoice2" text="2" />
+      <Button fx:id="nightChoice3" layoutX="245.0" layoutY="338.0" mnemonicParsing="false" onAction="#nightChoice3" text="3" />
+      <Button fx:id="nightChoice4" layoutX="337.0" layoutY="338.0" mnemonicParsing="false" onAction="#nightChoice4" text="4" />
+   </children>
+</AnchorPane>
