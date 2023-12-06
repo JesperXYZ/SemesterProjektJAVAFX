@@ -97,4 +97,6 @@ public class ItemsDescription {
     public static double getHungerLevelInt(){
         return hungerLevel;
     }
+    public static void resetHungerLevel(){hungerLevel=5;}
+    public static void resetGlucoseLevel(){glucoseLevel=5;}
 }

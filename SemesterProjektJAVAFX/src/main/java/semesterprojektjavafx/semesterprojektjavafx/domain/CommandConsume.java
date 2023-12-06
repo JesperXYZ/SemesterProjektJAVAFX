@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CommandConsume extends BaseCommand implements Command {
 
-    CommandConsume() {
+    public CommandConsume() {
         description = "You can consume the following items when they are in your inventory: apple, ice tea, milk, almonds";
     }
 
@@ -18,7 +18,7 @@ public class CommandConsume extends BaseCommand implements Command {
 
     }
 
-    public void consumeWhat(String item) {
+    public static void consumeWhat(String item) {
 
         ArrayList<String> iInventory = Context.getCurrentInventory();
         String iItem = item;

@@ -3,18 +3,20 @@ package semesterprojektjavafx.semesterprojektjavafx.presentation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-import semesterprojektjavafx.semesterprojektjavafx.domain.*;
+import semesterprojektjavafx.semesterprojektjavafx.domain.CommandConsume;
+import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
+import semesterprojektjavafx.semesterprojektjavafx.domain.Inventory;
+import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
 
 import java.io.IOException;
-import java.util.Objects;
 
-public class AvailabilityController {
+public class ItemConsumptionController {
     @FXML
     MenuItem item1;
     @FXML
@@ -24,84 +26,76 @@ public class AvailabilityController {
     @FXML
     MenuItem item4;
     @FXML
-    MenuButton availableItems;
-    public void initialize() {
-        availableItems.setText("Available items");
-        item1.setDisable(true);
-        item2.setVisible(false);
-        item3.setVisible(false);
-        item4.setVisible(false);
-        item1.setText("No items are currently available");
+    MenuButton Consume;
 
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Bedroom"))
-        {
-            item1.setVisible(true);
-            item2.setVisible(true);
+    public void initialize() {
+        Consume.setText("Consume");
+        updateItemVisibilityAll();
+    }
+
+    private void updateItemVisibility(String itemName, MenuItem item) {
+        if (Inventory.inventoryStorage.contains(itemName)) {
+            item.setVisible(true);
+            item.setText(itemName);
+        } else {
+            item.setVisible(false);
+        }
+    }
+
+    private boolean hasEdibleItems() {
+        return Inventory.inventoryStorage.contains("milk") ||
+                Inventory.inventoryStorage.contains("ice tea") ||
+                Inventory.inventoryStorage.contains("almonds") ||
+                Inventory.inventoryStorage.contains("apple");
+    }
+
+    public void updateItemVisibilityAll() {
+        if (hasEdibleItems()) {
+            updateItemVisibility("milk", item1);
+            updateItemVisibility("ice tea", item2);
+            updateItemVisibility("almonds", item3);
+            updateItemVisibility("apple", item4);
+        } else {
+            item1.setDisable(true);
+            item2.setVisible(false);
             item3.setVisible(false);
             item4.setVisible(false);
-            item1.setText("Glucose meter");
-            item2.setText("Insulin injector");
-            item1.setDisable(false);
-        }
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
-        {
-            item1.setVisible(true);
-            item2.setVisible(true);
-            item3.setVisible(true);
-            item4.setVisible(true);
-            item1.setText("Milk (250 ml)");
-            item2.setText("Almonds (15 g)");
-            item3.setText("Ice tea (250 ml)");
-            item4.setText("Apple (110)");
-            item1.setDisable(false);
+            item1.setText("You currently have no food or drink.");
         }
     }
 
     @FXML
-    void grabItem1(ActionEvent event) throws IOException
-    {
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Bedroom"))
-        {
-            CommandPickUp.grabWhat("glucosemeter");
-        }
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
-        {
-            CommandPickUp.grabWhat("milk");
-        }
+    void consumeItem1(ActionEvent event) throws IOException {
+        consumeItem("milk");
         reloadScene(event);
     }
 
     @FXML
-    void grabItem2(ActionEvent event) throws IOException
-    {
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Bedroom"))
-        {
-            CommandPickUp.grabWhat("insulininjector");
-        }
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
-        {
-            CommandPickUp.grabWhat("almonds");
-        }
+    void consumeItem2(ActionEvent event) throws IOException {
+        consumeItem("ice tea");
         reloadScene(event);
     }
+
     @FXML
-    void grabItem3(ActionEvent event) throws IOException
-    {
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
-        {
-            CommandPickUp.grabWhat("ice tea");
-        }
+    void consumeItem3(ActionEvent event) throws IOException {
+        consumeItem("almonds");
         reloadScene(event);
     }
+
     @FXML
-    void grabItem4(ActionEvent event) throws IOException
-    {
-        if(Objects.equals(Game.context.getCurrent().getName(), "The Kitchen"))
-        {
-            CommandPickUp.grabWhat("apple");
-        }
+    void consumeItem4(ActionEvent event) throws IOException {
+        consumeItem("apple");
         reloadScene(event);
     }
+
+    private void consumeItem(String itemName) throws IOException {
+        CommandConsume commandConsume = new CommandConsume();
+        if (Inventory.inventoryStorage.contains(itemName)) {
+            commandConsume.consumeWhat(itemName);
+        }
+        updateItemVisibilityAll();
+    }
+
     private void reloadScene(ActionEvent event) throws IOException {
         //Logic to convert the currentSpaceName to the absolute path of its fxml file
         Space currentSpace = Game.context.getCurrent();
@@ -135,3 +129,4 @@ public class AvailabilityController {
         stage.show();
     }
 }
+

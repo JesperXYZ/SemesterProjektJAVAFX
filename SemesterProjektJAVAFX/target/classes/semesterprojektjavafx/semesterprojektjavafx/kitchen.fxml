@@ -22,11 +22,13 @@
             <children>
                 <Label text="Current exits:" textFill="WHITE" />
                 <Button mnemonicParsing="false" onAction="#goCorridor" text="Go corridor" />
-                <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
+                <Label layoutX="12.0" layoutY="39.0" text="Actions:" textFill="WHITE" />
                 <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
                 <fx:include source="ButtonsAndPanes/grabItem.fxml">
                 </fx:include>
                 <fx:include source="ButtonsAndPanes/useInsulinInjector.fxml">
+                </fx:include>
+                <fx:include source="ButtonsAndPanes/consumeItem.fxml">
                 </fx:include>
             </children>
             <padding>
