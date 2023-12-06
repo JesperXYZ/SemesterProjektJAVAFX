@@ -1,26 +1,67 @@
 package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import semesterprojektjavafx.semesterprojektjavafx.domain.DayCount;
-import semesterprojektjavafx.semesterprojektjavafx.domain.ItemsDescription;
+import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.*;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class EndScreenController {
+    private Stage stage;
+    Scene scene;
+    Parent root;
     String[] gameOverText = {"You did not eat enough so you starved", "You ate more than you could", "Your glucose level got too low", "Your glucose level got too high", "You have mastered diabetes!"};
-    @FXML
-    private Label gameOverLabel;
+    @FXML private Label gameOverLabel;
+    @FXML private Button playAgain;
+    @FXML private Button quit;
+
+    public int value(){
+        if(ItemsDescription.getHungerLevelInt()<=0){
+            return 0;
+        } else if(ItemsDescription.getHungerLevelInt()>10){
+            return 1;
+        } else if (ItemsDescription.getGlucoseLevel() <= 3){
+            return 2;
+        } else if (ItemsDescription.getGlucoseLevel() >= 8){
+            return 3;
+        } else if (DayCount.getDay() == 6){
+            return 4;
+        } else {
+            return 0;
+        }
+    }
 
     public void initialize() {
-        if(ItemsDescription.getHungerLevelInt()<=0){
-            gameOverLabel.setText("You did not eat enough so you starved");
-        } else if(ItemsDescription.getHungerLevelInt()>10){
-            gameOverLabel.setText("You ate more than you could");
-        } else if (ItemsDescription.getGlucoseLevel() <= 3){
-            gameOverLabel.setText("Your glucose level got too low");
-        } else if (ItemsDescription.getGlucoseLevel() >= 8){
-            gameOverLabel.setText("Your glucose level got too high");
-        } else if (DayCount.getDay() == 6){
-            gameOverLabel.setText("You have mastered diabetes!");
-        }
+        String msg = (gameOverText[value()]);
+        gameOverLabel.setText(msg);
+    }
+
+    @FXML
+    void beginPlayAgain(ActionEvent event) throws IOException {
+        ItemsDescription.resetGlucoseLevel();
+        ItemsDescription.resetHungerLevel();
+        DayCount.restDay();
+        CommandBegin.setActivityDone(false);
+
+        root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml"));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        Game.context.transition("houseEntry");
+    }
+
+    @FXML
+    void beginQuit(ActionEvent event){
+        Stage stage = (Stage) quit.getScene().getWindow();
+        stage.close();
     }
 }

@@ -10,4 +10,5 @@ public class DayCount {
     public static void plusDay(int newDay){
         day += newDay;
     }
+    public static void restDay(){day=0;}
 }

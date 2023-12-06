@@ -31,6 +31,7 @@ public class RoomController {
     Stage stage;
     Scene scene;
     Parent root;
+
     public boolean checkGame(){
         boolean gameOn=true;
         if(ItemsDescription.getHungerLevelInt() <= 0||ItemsDescription.getHungerLevelInt() > 10||ItemsDescription.getGlucoseLevel() <=3||ItemsDescription.getGlucoseLevel() >=8||DayCount.getDay() == 6){
@@ -41,22 +42,23 @@ public class RoomController {
     }
 
     public void gameOver() throws IOException {
-        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/ButtonsAndPanes/endScreen.fxml")));
+        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
     @FXML
     void goCorridor(ActionEvent event) throws IOException {
-        if(checkGame()==false){
+            Game.context.transition("corridor");
+            root = FXMLLoader.load(getClass().getResource(CORRIDOR_FILE));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        if(checkGame()==false) {
             gameOver();
         }
-        Game.context.transition("corridor");
-        root = FXMLLoader.load(getClass().getResource(CORRIDOR_FILE));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
     @FXML
     void goHouseEntry(ActionEvent event) throws IOException {
@@ -72,6 +74,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goGarden(ActionEvent event) throws IOException {
@@ -81,6 +87,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goKitchen(ActionEvent event) throws IOException {
@@ -90,6 +100,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goBedroom(ActionEvent event) throws IOException {
@@ -99,6 +113,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goClub(ActionEvent event) throws IOException {
@@ -108,6 +126,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goBirthdayParty(ActionEvent event) throws IOException {
@@ -117,6 +139,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goSchool(ActionEvent event) throws IOException {
@@ -126,6 +152,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goFootball(ActionEvent event) throws IOException {
@@ -135,6 +165,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
     @FXML
     void goWork(ActionEvent event) throws IOException {
@@ -144,6 +178,10 @@ public class RoomController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        if(checkGame()==false) {
+            gameOver();
+        }
     }
 
     @FXML
