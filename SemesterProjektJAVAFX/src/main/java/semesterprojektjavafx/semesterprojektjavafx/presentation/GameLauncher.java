@@ -9,8 +9,6 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
 
-
-
 public class GameLauncher extends Application {
 
     private static final String HOUSEENTRY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml";

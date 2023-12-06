@@ -15,7 +15,6 @@ public class ItemUsageController {
     void UseInsulinInjector(ActionEvent event) {
        if (Inventory.inventoryStorage.contains("insulininjector"));
             ItemsDescription.impactGlucoseLevel("insulininjector");
-
     }
 
     @FXML
