@@ -33,6 +33,7 @@
             </fx:include>
             <fx:include source="ButtonsAndPanes/useInsulinInjector.fxml">
             </fx:include>
+            <ChoiceBox prefWidth="150.0" />
          </children>
          <padding>
             <Insets left="2.0" />

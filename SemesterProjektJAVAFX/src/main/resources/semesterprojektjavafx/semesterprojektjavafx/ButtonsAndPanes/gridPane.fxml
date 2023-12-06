@@ -2,6 +2,7 @@
 
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
 <GridPane gridLinesVisible="true" prefHeight="183.0" prefWidth="128.0"
           fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.InventoryController" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
@@ -14,6 +15,9 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
   <effect>
-
   </effect>
+<ImageView>
+  <image>
+  </image>
+</ImageView>
 </GridPane>

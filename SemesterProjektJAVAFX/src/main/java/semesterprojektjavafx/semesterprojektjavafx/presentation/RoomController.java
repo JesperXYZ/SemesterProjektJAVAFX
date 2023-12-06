@@ -9,11 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import semesterprojektjavafx.semesterprojektjavafx.domain.CommandBegin;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
+import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Objects;
 
 public class RoomController {
@@ -31,8 +31,26 @@ public class RoomController {
     Stage stage;
     Scene scene;
     Parent root;
+    public boolean checkGame(){
+        boolean gameOn=true;
+        if(ItemsDescription.getHungerLevelInt() <= 0||ItemsDescription.getHungerLevelInt() > 10||ItemsDescription.getGlucoseLevel() <=3||ItemsDescription.getGlucoseLevel() >=8||DayCount.getDay() == 6){
+            gameOn=false;
+            return gameOn;
+        }
+        return gameOn;
+    }
+
+    public void gameOver() throws IOException {
+        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/ButtonsAndPanes/endScreen.fxml")));
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     void goCorridor(ActionEvent event) throws IOException {
+        if(checkGame()==false){
+            gameOver();
+        }
         Game.context.transition("corridor");
         root = FXMLLoader.load(getClass().getResource(CORRIDOR_FILE));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -133,25 +151,29 @@ public class RoomController {
         if (Context.getCurrent() != null) {
             if (Context.getCurrentActivity() != null) {
                 if (Context.getCurrentActivity().equals(CommandBegin.getActivity())) {
-                    root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
-                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    scene = new Scene(root);
-                    stage.setScene(scene);
-                    stage.show();
-                }
-                if (Context.getCurrentActivity().equals("sleep")) {
-                    if (CommandBegin.getActivityDone() == true) {
-                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/sleep.fxml")));
+                    if(CommandBegin.getActivityDone()==false) {
+                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
-
                     }else{
-                        System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
+                        System.out.println("You have finished todays activity");
                     }
                 }
-                System.out.println("You can't do this activity today");
+                else if (Context.getCurrentActivity().equals("sleep")) {
+                    if (CommandBegin.getActivityDone() == false) {
+                        System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
+                    }else{
+                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/night.fxml")));
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
+                    }
+                } else{
+                    System.out.println("You can't do this activity today");
+                }
             }else{
                 System.out.println("No activity here");
             }
