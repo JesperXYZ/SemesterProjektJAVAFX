@@ -12,8 +12,4 @@ public class GlucoseLevelController {
         this.glucoseLevel = GetGlucoseLevelController.glucoseLevelString;
         getGlucoseLevel.setText(this.glucoseLevel);
     }
-    public void reload() {
-
-        initialize();
-    }
 }

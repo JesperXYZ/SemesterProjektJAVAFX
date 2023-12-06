@@ -26,8 +26,8 @@ public class GetGlucoseLevelController {
         if (Inventory.inventoryStorage.contains("glucosemeter")) {
             glucoseLevelString = ""+ItemsDescription.getGlucoseLevel();
         }
-        //GlucoseLevelController.reload();
 
+        //Logic to convert the currentSpaceName to the absolute path of its fxml file
         Space currentSpace = Game.context.getCurrent();
         String currentSpaceName = currentSpace.getName();
         String nameWithoutTHE;
@@ -51,6 +51,7 @@ public class GetGlucoseLevelController {
         }
         String pathName = "/semesterprojektjavafx/semesterprojektjavafx/"+nameWithoutTHELowerCaseWithoutSpace2+".fxml";
 
+        //reloads the scene to initialize the label in GlucoseLabelController immediately
         root = FXMLLoader.load(getClass().getResource(pathName));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
