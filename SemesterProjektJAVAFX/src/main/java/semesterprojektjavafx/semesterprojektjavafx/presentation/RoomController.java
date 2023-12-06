@@ -14,6 +14,8 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Objects;
 
 public class RoomController {
@@ -27,6 +29,7 @@ public class RoomController {
     private static final String SCHOOL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/school.fxml";
     private static final String FOOTBALL_FILE = "/semesterprojektjavafx/semesterprojektjavafx/football.fxml";
     private static final String WORK_FILE = "/semesterprojektjavafx/semesterprojektjavafx/work.fxml";
+    private static final String SLEEP_FILE = "semesterprojektjavafx/semesterprojektjavafx/sleep.fxml";
 
     Stage stage;
     Scene scene;
@@ -133,25 +136,29 @@ public class RoomController {
         if (Context.getCurrent() != null) {
             if (Context.getCurrentActivity() != null) {
                 if (Context.getCurrentActivity().equals(CommandBegin.getActivity())) {
-                    root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
-                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    scene = new Scene(root);
-                    stage.setScene(scene);
-                    stage.show();
-                }
-                if (Context.getCurrentActivity().equals("sleep")) {
-                    if (CommandBegin.getActivityDone() == true) {
-                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/sleep.fxml")));
+                    if(CommandBegin.getActivityDone()==false) {
+                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/activity.fxml")));
                         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
-
                     }else{
-                        System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
+                        System.out.println("You have finished todays activity");
                     }
                 }
-                System.out.println("You can't do this activity today");
+                else if (Context.getCurrentActivity().equals("sleep")) {
+                    if (CommandBegin.getActivityDone() == false) {
+                        System.out.println("You have to finish " + CommandBegin.getActivity() + " before you can sleep");
+                    }else{
+                        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/night.fxml")));
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        scene = new Scene(root);
+                        stage.setScene(scene);
+                        stage.show();
+                    }
+                } else{
+                    System.out.println("You can't do this activity today");
+                }
             }else{
                 System.out.println("No activity here");
             }
