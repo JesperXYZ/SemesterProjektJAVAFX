@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.GetGlucoseLevelController">
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.ItemUsageController">
     <children>
-        <Button mnemonicParsing="false" text="Get glucose level (requires glucose meter)" textAlignment="CENTER" wrapText="true" onAction="#UseGlucoseMeter">
+        <Button mnemonicParsing="false" text="Use insulin injector (requires insulin injector)" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font size="10.0" />
             </font>
