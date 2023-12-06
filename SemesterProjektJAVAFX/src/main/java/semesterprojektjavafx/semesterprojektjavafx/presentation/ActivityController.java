@@ -49,6 +49,17 @@ public class ActivityController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        boolean gameOn=true;
+        if(ItemsDescription.getHungerLevelInt() <= 0||ItemsDescription.getHungerLevelInt() > 10||ItemsDescription.getGlucoseLevel() <=3||ItemsDescription.getGlucoseLevel() >=8||DayCount.getDay() == 6){
+            gameOn=false;
+        }
+        if(gameOn==false) {
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 
     public void picked2(ActionEvent event) throws IOException {
@@ -61,5 +72,16 @@ public class ActivityController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
+        boolean gameOn=true;
+        if(ItemsDescription.getHungerLevelInt() <= 0||ItemsDescription.getHungerLevelInt() > 10||ItemsDescription.getGlucoseLevel() <=3||ItemsDescription.getGlucoseLevel() >=8||DayCount.getDay() == 6){
+            gameOn=false;
+        }
+        if(gameOn==false) {
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 }
