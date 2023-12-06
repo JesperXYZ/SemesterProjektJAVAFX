@@ -26,7 +26,7 @@
                 <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
                 <fx:include source="ButtonsAndPanes/grabItem.fxml">
                 </fx:include>
-                <fx:include source="ButtonsAndPanes/Use.fxml">
+                <fx:include source="ButtonsAndPanes/useInsulinInjector.fxml">
                 </fx:include>
                 <fx:include source="ButtonsAndPanes/consumeItem.fxml">
                 </fx:include>
@@ -58,11 +58,11 @@
                 </HBox>
                 <HBox prefHeight="21.0" prefWidth="128.0">
                     <children>
-                        <fx:include source="ButtonsAndPanes/glucoselevel.fxml">
+                        <fx:include source="ButtonsAndPanes/glucoseLevel.fxml">
                         </fx:include>
                     </children>
                 </HBox>
-                <fx:include source="ButtonsAndPanes/GetGlucoseLevel.fxml">
+                <fx:include source="ButtonsAndPanes/getGlucoseLevel.fxml">
                 </fx:include>
                 <Label text="Inventory:" textFill="WHITE" />
                 <fx:include source="ButtonsAndPanes/gridPane.fxml">

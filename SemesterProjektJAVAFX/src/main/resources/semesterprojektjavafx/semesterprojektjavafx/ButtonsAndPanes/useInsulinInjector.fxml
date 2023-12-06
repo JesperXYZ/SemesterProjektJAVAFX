@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="semesterprojektjavafx.semesterprojektjavafx.presentation.UseInsulinInjectorController">
+    <children>
+        <Button mnemonicParsing="false" text="Use insulin injector (requires insulin injector)" textAlignment="CENTER" wrapText="true" onAction="#UseInsulinInjector">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Button>
+    </children>
+</HBox>

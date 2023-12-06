@@ -2,14 +2,13 @@ package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
-
-
 
 public class GameLauncher extends Application {
 
@@ -30,6 +29,7 @@ public class GameLauncher extends Application {
         stage.setScene(scene);
         stage.show();
         Game.context.transition("houseEntry");
+
         /*
         boolean hungerLevelLow = false, hugerLevelHigh = false, glucoseLevelLow = false, glucoseLevelHigh = false;
         boolean win = false;
