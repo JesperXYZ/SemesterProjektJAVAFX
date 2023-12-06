@@ -29,7 +29,8 @@ public class GetGlucoseLevelController {
     @FXML
     void UseGlucoseMeter(ActionEvent event) throws IOException {
         if (Inventory.inventoryStorage.contains("glucosemeter")) {
-            glucoseLevelString = ""+ItemsDescription.getGlucoseLevel();
+            String glucoseLevelStringFake = ""+ItemsDescription.getGlucoseLevel();
+            glucoseLevelString = glucoseLevelStringFake.substring(0, 3);
         }
 
         //Logic to convert the currentSpaceName to the absolute path of its fxml file
