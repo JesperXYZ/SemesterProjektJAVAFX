@@ -25,7 +25,7 @@
                 <Button mnemonicParsing="false" onAction="#goKitchen" text="Go kitchen" />
                 <Button mnemonicParsing="false" onAction="#goGarden" text="Go garden" />
                 <Button mnemonicParsing="false" onAction="#goBedroom" text="Go bedroom" />
-                <Label layoutX="12.0" layoutY="39.0" text="To do's" textFill="WHITE" />
+                <Label layoutX="12.0" layoutY="39.0" text="Actions:" textFill="WHITE" />
                 <Button mnemonicParsing="false" onAction="#beginActivity" text="Begin activity" />
                 <fx:include source="ButtonsAndPanes/grabItem.fxml">
                 </fx:include>
