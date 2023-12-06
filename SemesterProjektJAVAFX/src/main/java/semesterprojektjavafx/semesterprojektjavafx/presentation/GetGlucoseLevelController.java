@@ -21,6 +21,11 @@ public class GetGlucoseLevelController {
     Scene scene;
     Parent root;
     static String glucoseLevelString = "N/A";
+    public void initialize() {
+        if (!Inventory.inventoryStorage.contains("glucosemeter")) {
+            glucoseLevelString = "N/A";
+        }
+    }
     @FXML
     void UseGlucoseMeter(ActionEvent event) throws IOException {
         if (Inventory.inventoryStorage.contains("glucosemeter")) {
