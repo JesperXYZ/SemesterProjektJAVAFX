@@ -9,9 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import semesterprojektjavafx.semesterprojektjavafx.domain.CommandBegin;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Context;
-import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
+import semesterprojektjavafx.semesterprojektjavafx.domain.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,8 +31,26 @@ public class RoomController {
     Stage stage;
     Scene scene;
     Parent root;
+    public boolean checkGame(){
+        boolean gameOn=true;
+        if(ItemsDescription.getHungerLevelInt() <= 0||ItemsDescription.getHungerLevelInt() > 10||ItemsDescription.getGlucoseLevel() <=3||ItemsDescription.getGlucoseLevel() >=8||DayCount.getDay() == 6){
+            gameOn=false;
+            return gameOn;
+        }
+        return gameOn;
+    }
+
+    public void gameOver() throws IOException {
+        root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/ButtonsAndPanes/endScreen.fxml")));
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @FXML
     void goCorridor(ActionEvent event) throws IOException {
+        if(checkGame()==false){
+            gameOver();
+        }
         Game.context.transition("corridor");
         root = FXMLLoader.load(getClass().getResource(CORRIDOR_FILE));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
