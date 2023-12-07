@@ -46,6 +46,7 @@ public class QandAController {
 
         if(DayCount.getDay()==6){
             root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -71,6 +72,7 @@ public class QandAController {
 
         if(DayCount.getDay()==6){
             root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -96,6 +98,7 @@ public class QandAController {
 
         if(DayCount.getDay()==6){
             root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -121,6 +124,7 @@ public class QandAController {
 
         if(DayCount.getDay()==6){
             root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
