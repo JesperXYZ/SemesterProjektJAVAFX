@@ -30,32 +30,54 @@ public class CommandBegin extends BaseCommand implements Command {
     static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-3,-3,-5},{-2,-5,0,0},{2,2,2,1},{1,-3,3,0}};
 
 
-    static String[] nightQuestion = {"Question of the day\n" +
-                "Which of these lower your blood sugar?\n" +
-                "Physical activity, food and drinks, public speaking, sleeping\n" +
-                "Pick 1, 2, 3 or 4\n",
-            "Question of the day\n" +
+    static String[] nightQuestion = {
+            "Question of the day\n" +   //day 1
+                  "Which of these lower your blood sugar?\n" +
+                  "1. Physical activity \n" +
+                  "2. Rood and drinks \n" +
+                  "3. Public speaking \n" +
+                  "4. Sleeping \n" +
+                  "\nPick 1, 2, 3 or 4\n",
+
+            "Question of the day\n" +   //day 2
                     "What do you blood sugar level have to be to maintain a normal level?\n" +
-                    "4-7 mmml/l, 2-9 mmml/l, 4-9 mmml/l, 2-7 mmml/l\n" +
-                    "Pick 1, 2, 3 or 4\n",
-            "Question of the day\n" +
-                    "How dose alcohol affect your blood sugar?\n" +
-                    "It gets higer and you have to use insulin, it falls and you have to eat or drink,\n alcohol hase no affect on on your blood sugar, alcohol can make your blood sugar rise and fall you can therefor not drink alcohol if you have diabetes" +
-                    "Pick 1, 2, 3 or 4\n",
-            "Question of the day\n" +
+                    "1. 4-7 mmml/l \n" +
+                    "2. 2-9 mmml/l \n" +
+                    "3. 4-9 mmml/l \n" +
+                    "4. 2-7 mmml/l \n" +
+                    "\nPick 1, 2, 3 or 4\n",
+
+            "Question of the day\n" +   //day 3
+                    "How dose alcohol affect your blood sugar? \n" +
+                    "1. It gets higer and you have to use insulin \n" +
+                    "2. It falls and you have to eat or drink \n" +
+                    "3. Alcohol hase no affect on on your blood sugar \n" +
+                    "4. Alcohol can make your blood sugar rise and fall, you can therefor not drink alcohol if you have diabetes \n" +
+                    "\nPick 1, 2, 3 or 4\n",
+
+            "Question of the day\n" +   //day 4
                     "Which og these make you blood sugar rise the most?\n" +
-                    "Milk (250 ml), almonds (15 g), Iced tea (250 ml), an apple (110 g)\n" +
-                    "Pick 1, 2, 3 or 4\n",
-            "Question of the day\n" +
+                    "1. Milk (250 ml) \n" +
+                    "2. Almonds (15 g) \n" +
+                    "3. Iced tea (250 ml) \n" +
+                    "4. An apple (110 g) \n" +
+                    "\nPick 1, 2, 3 or 4\n",
+
+            "Question of the day\n" +   //day 5
                     "How dose insulin affect your blood sugar?\n" +
-                    "Insulin signals to the muscles, adipose tissue and lever to consume sugar from the blood. Thereby insulin lower the blood sugar,\n insulin stimulate the production of glucose: it produce glucose in the lever which increases the blood sugar,\n" +
-                    " insulin works as a sugerstimulating hormone: It signals to the cells to increase the production of sugar to the blood resulting in an increases of the blood sugar,\n" +
-                    " insulin makes the muscles unable to consume sugar while making the lever produce more sugar increasing the blood sugar\n" +
-                    "Pick 1, 2, 3 or 4\n",
-            "Question of the day\n" +
+                    "1. Insulin signals to the muscles, adipose tissue and lever to consume sugar from the blood. Thereby insulin lower the blood sugar \n" +
+                    "2. Insulin stimulate the production of glucose: it produce glucose in the lever which increases the blood sugar \n" +
+                    "3. Insulin works as a suger-stimulating hormone: It signals to the cells to increase the production of sugar to the blood resulting in an increases of the blood sugar \n" +
+                    "4. Insulin makes the muscles unable to consume sugar while making the lever produce more sugar increasing the blood sugar \n" +
+                    "\nPick 1, 2, 3 or 4\n",
+
+            "Question of the day\n" +   //day 6
                     "Which type of carbohydrate have a tendency to affect the blood sugar more dramatically then other types og carbohydrates?\n" +
-                    "Complex carbohydrates such as whole grain products, fat has a bigger affect on the blood sugar than carbohydrates,\n simple carbohydrates such as sugar has a tendency to make the blood sugar rise quickly, protein has no affect on the blood sugar\n" +
-                    "Pick 1, 2, 3 or 4\n"};
+                    "1. Complex carbohydrates such as whole grain products \n" +
+                    "2. Fat has a bigger affect on the blood sugar than carbohydrates \n" +
+                    "3. Simple carbohydrates such as sugar has a tendency to make the blood sugar rise quickly \n" +
+                    "4. Protein has no affect on the blood sugar \n" +
+                    "\nPick 1, 2, 3 or 4\n"};
     static String[] rightNightChoise = {"1", "1", "2", "4", "1", "3"};
     String[][] wrongNightChoise = {{"2", "3", "4"}, {"2", "3", "4"}, {"1", "3", "4"}, {"1", "2", "3"},{"2","3","4"},{"1","2","4"}};
 

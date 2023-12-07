@@ -46,11 +46,11 @@ public class Game {
         if (DayCount.getDay() == 6) {win = true;}
       }
       if(hungerLevelLow==true){
-        System.out.println("You did not eat enough so you starved");
+        System.out.println("You forgot to eat, and starved to death");
         Context.makeDone();
       }
       if(hugerLevelHigh==true){
-        System.out.println("You ate more than you could");
+        System.out.println("Your stomach got too full!");
         Context.makeDone();
       }
       if(glucoseLevelLow==true){

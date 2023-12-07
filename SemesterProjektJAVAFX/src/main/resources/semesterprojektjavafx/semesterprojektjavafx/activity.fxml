@@ -11,7 +11,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Button fx:id="choice1" alignment="CENTER" contentDisplay="CENTER" layoutX="417.0" layoutY="290.0" mnemonicParsing="false" onAction="#picked1" />
-      <Button fx:id="choice2" alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="290.0" mnemonicParsing="false" onAction="#picked2" />
+      <Button fx:id="choice1" alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="318.0" mnemonicParsing="false" onAction="#picked1" prefHeight="26.0" prefWidth="218.0" />
+      <Button fx:id="choice2" alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="318.0" mnemonicParsing="false" onAction="#picked2" prefHeight="26.0" prefWidth="218.0" />
    </children>
 </AnchorPane>

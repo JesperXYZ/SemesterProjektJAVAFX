@@ -8,15 +8,9 @@
    <children>
       <Label fx:id="activityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="30.0" prefHeight="198.0" prefWidth="470.0" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="24.0" />
+            <Font size="14.0" />
          </font></Label>
-      <Button fx:id="choice1" layoutX="322.0" layoutY="290.0" mnemonicParsing="false" onAction="#picked1" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <Button fx:id="choice2" alignment="CENTER" contentDisplay="CENTER" layoutX="155.0" layoutY="290.0" mnemonicParsing="false" onAction="#picked2" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
+      <Button fx:id="choice1" alignment="CENTER" contentDisplay="CENTER" layoutX="327.0" layoutY="318.0" mnemonicParsing="false" onAction="#picked1" prefHeight="26.0" prefWidth="218.0" />
+      <Button fx:id="choice2" alignment="CENTER" contentDisplay="CENTER" layoutX="56.0" layoutY="318.0" mnemonicParsing="false" onAction="#picked2" prefHeight="26.0" prefWidth="218.0" />
    </children>
 </AnchorPane>
