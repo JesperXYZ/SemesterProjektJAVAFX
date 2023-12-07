@@ -2,21 +2,14 @@ package semesterprojektjavafx.semesterprojektjavafx.presentation;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import semesterprojektjavafx.semesterprojektjavafx.domain.*;
-
-import java.io.IOException;
 
 public class GameLauncher extends Application {
 
     private static final String INTRODUCTION_FILE = "/semesterprojektjavafx/semesterprojektjavafx/introduction.fxml";
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     // returner det nuværende rum (Space) Game.context.getCurrent();
     // returner de tilgængelige items i rummet (String[]) Game.context.getCurrentAvailableItems();
