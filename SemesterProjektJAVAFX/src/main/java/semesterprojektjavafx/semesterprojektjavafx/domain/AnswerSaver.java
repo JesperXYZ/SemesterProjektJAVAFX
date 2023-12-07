@@ -20,11 +20,9 @@ public class AnswerSaver {
             // ,true laver det til append tilstand som gør at den gamle fil ikke overrides, og dermed tilføjer svar til den gamle fil.
             pw.println("Brugernes svar: " + answer);
             pw.close();
-            System.out.println("Answer saved");
 
         } catch (IOException e) {
             e.printStackTrace();
-            System.err.println("Error saving answer: " + e.getMessage()); // Print a user-friendly error message
         }
     }
 }
