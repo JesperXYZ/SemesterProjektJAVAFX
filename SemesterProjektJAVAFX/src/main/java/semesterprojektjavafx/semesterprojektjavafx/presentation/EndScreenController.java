@@ -17,7 +17,7 @@ public class EndScreenController {
     private Stage stage;
     Scene scene;
     Parent root;
-    String[] gameOverText = {"You did not eat enough so you starved", "You ate more than you could", "Your glucose level got too low", "Your glucose level got too high", "You have mastered diabetes!"};
+    String[] gameOverText = {"You forgot to eat, and starved to death", "Your stomach got too full!", "Your glucose level got too low", "Your glucose level got too high", "You have mastered diabetes!"};
     @FXML private Label gameOverLabel;
     @FXML private Button playAgain;
     @FXML private Button quit;
