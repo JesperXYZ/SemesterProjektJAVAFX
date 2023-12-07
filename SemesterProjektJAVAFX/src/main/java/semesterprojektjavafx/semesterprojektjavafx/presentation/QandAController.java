@@ -23,6 +23,10 @@ public class QandAController {
 
     @FXML private Label sleepLabel;
 
+    public void newday(){
+
+    }
+
     public void initialize(){
         String nightQuestion = (CommandBegin.getNightQuestion());
         sleepLabel.setText(nightQuestion);
@@ -40,11 +44,18 @@ public class QandAController {
         EndScreenController.clearInventory();
         ItemsDescription.setHungerLevel(-2);
 
-        root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if(DayCount.getDay()==6){
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else {
+            root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
     public void nightChoice2(ActionEvent event) throws IOException {
         if("2".equals(CommandBegin.getRightNightChoice())){
@@ -58,11 +69,18 @@ public class QandAController {
         EndScreenController.clearInventory();
         ItemsDescription.setHungerLevel(-2);
 
-        root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if(DayCount.getDay()==6){
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else {
+            root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
     public void nightChoice3(ActionEvent event) throws IOException {
         if("3".equals(CommandBegin.getRightNightChoice())){
@@ -76,11 +94,18 @@ public class QandAController {
         EndScreenController.clearInventory();
         ItemsDescription.setHungerLevel(-2);
 
-        root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if(DayCount.getDay()==6){
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else {
+            root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
     public void nightChoice4(ActionEvent event) throws IOException {
         if("4".equals(CommandBegin.getRightNightChoice())){
@@ -94,10 +119,17 @@ public class QandAController {
         EndScreenController.clearInventory();
         ItemsDescription.setHungerLevel(-2);
 
-        root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if(DayCount.getDay()==6){
+            root = FXMLLoader.load((getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/endScreen.fxml")));
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else {
+            root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
     }
 }
