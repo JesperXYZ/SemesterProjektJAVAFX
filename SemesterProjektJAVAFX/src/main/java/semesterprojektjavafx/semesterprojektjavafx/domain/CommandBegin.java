@@ -7,27 +7,27 @@ public class CommandBegin extends BaseCommand implements Command {
     static boolean activityDone = false; //This boolean makes sure the activity of the day is done before the character can begin sleep
     //All arrays are either text that will show when doing an activity, input options or outcomes of the different activities
     static String[] activity = {"school", "work", "football", "gardening", "birthday", "clubbing"};
-    static String[] begun = {"you have begun school!",
-            "you have begun work!",
-            "you have begun football!",
-            "you have begun gardening!",
-            "you have antended your friend Matts birthday!",
-            "you went to Proud Mary!"};
-    static String[] question = {"you have a break, what do you do in your break?",
-            "you are at work, what do you want to do?",
-            "There is a scout at your practice! what do you do?",
-            "your mom need you to help gardening for 7 hours! what do you do?",
-            "there is both a big piece of cake and candy at the party. what do you choose?",
-            "you need a drink(or many). what do you choose?"};
-    String[] choices = {"be active outside or relax inside",
-            "Work hard and psysical or see how little you can do in a day",
-            "Thats not for me or im gonna be the next ronaldo",
-            "help or leave",
-            "brunsviger or Kitkat",
-            "beer or vodkajuice"};
-    static String[] choice1 = {"Be active outside", "Work hard ", "That life is not for me", "help", "brunsviger", "beer"};
-    static String[] choice2 = {"Relax inside", "less is more", "im gonna be the next Ronaldo!", "leave", "KitKat", "vodkajuice"};
-    static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-5,-3,-5},{-3,-5,0,0},{3,2,3,1},{1,-3,3,0}};
+    static String[] begun = {"You have begun school! \n",
+            "You have begun work! \n",
+            "You have begun football! \n",
+            "You have begun gardening! \n",
+            "You have attended your friend Matt's birthday! \n",
+            "You went to Proud Mary! \n"};
+    static String[] question = {"You have a break. \n What do you do in your break?",
+            "You are at work. \n What do you want to do?",
+            "There is a scout at your practice! \n what do you do?",
+            "Your mom need your help gardening for 7 hours! \n What do you do?",
+            "There is both a big piece of cake and candy at the party. \n What do you choose?",
+            "You need a drink(or many). \n What do you choose?"};
+    String[] choices = {"Be active outside or relax inside",
+            "Work hard and physical or see how little you can do in a day",
+            "That's not for me or i'm going to be the next ronaldo",
+            "Help or Leave",
+            "Brunsviger or Kitkat",
+            "Beer or Vodka&Juice"};
+    static String[] choice1 = {"Be active outside", "Work hard ", "That life is not for me", "Help!", "Brunsviger", "Beer"};
+    static String[] choice2 = {"Relax inside", "Less is more", "I'm going to be the next Ronaldo!", "leave", "KitKat", "Vodka-Juice"};
+    static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-3,-3,-5},{-2,-5,0,0},{2,2,2,1},{1,-3,3,0}};
 
 
     static String[] nightQuestion = {"Question of the day\n" +
