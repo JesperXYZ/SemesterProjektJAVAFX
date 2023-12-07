@@ -15,6 +15,7 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.Inventory;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ItemConsumptionController {
     @FXML
@@ -36,7 +37,21 @@ public class ItemConsumptionController {
     private void updateItemVisibility(String itemName, MenuItem item) {
         if (Inventory.inventoryStorage.contains(itemName)) {
             item.setVisible(true);
-            item.setText(itemName);
+            if (Objects.equals(itemName, "milk")) {
+                item.setText("Milk (250 ml)");
+            }
+            else if (Objects.equals(itemName, "ice tea")) {
+                item.setText("Ice tea (250 ml)");
+            }
+            else if (Objects.equals(itemName, "almonds")) {
+                item.setText("Almonds (15 g)");
+            }
+            else if (Objects.equals(itemName, "apple")) {
+                item.setText("Apple 110 g");
+            }
+            else {
+                item.setText("Illegal item wtf");
+            }
         } else {
             item.setVisible(false);
         }
