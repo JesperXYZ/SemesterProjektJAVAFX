@@ -22,7 +22,7 @@ public class EndScreenController {
     @FXML private Button playAgain;
     @FXML private Button quit;
 
-    public int value(){
+    public int value(){ //Gives a value depending on how the player gets game over
         if(ItemsDescription.getHungerLevelInt()<=0){
             return 0;
         } else if(ItemsDescription.getHungerLevelInt()>10){
@@ -38,7 +38,7 @@ public class EndScreenController {
         }
     }
 
-    public static void clearInventory(){
+    public static void clearInventory(){ //Removes all items in inventory
         String[] items = {"milk", "almonds", "ice tea", "apple", "insulininjector", "glucosemeter"};
         while (Context.getCurrentInventory().contains("milk")||Context.getCurrentInventory().contains("almonds")||Context.getCurrentInventory().contains("ice tea")||Context.getCurrentInventory().contains("apple")||Context.getCurrentInventory().contains("insulininjector")||Context.getCurrentInventory().contains("glucosemeter")) {
             for (int i = 0; i < items.length; i++) {
@@ -50,6 +50,7 @@ public class EndScreenController {
         }
     }
 
+    //initialize is a method that is called when the FXML is loaded
     public void initialize() {
         String msg = (gameOverText[value()]);
         gameOverLabel.setText(msg);
