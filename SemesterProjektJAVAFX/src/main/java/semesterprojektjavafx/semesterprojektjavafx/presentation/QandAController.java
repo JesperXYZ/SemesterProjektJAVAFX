@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import semesterprojektjavafx.semesterprojektjavafx.domain.AnswerSaver;
 import semesterprojektjavafx.semesterprojektjavafx.domain.CommandBegin;
 import semesterprojektjavafx.semesterprojektjavafx.domain.DayCount;
+import semesterprojektjavafx.semesterprojektjavafx.domain.ItemsDescription;
 
 import java.io.IOException;
 
@@ -37,6 +38,7 @@ public class QandAController {
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
         EndScreenController.clearInventory();
+        ItemsDescription.setHungerLevel(-2);
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -54,6 +56,7 @@ public class QandAController {
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
         EndScreenController.clearInventory();
+        ItemsDescription.setHungerLevel(-2);
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -71,6 +74,7 @@ public class QandAController {
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
         EndScreenController.clearInventory();
+        ItemsDescription.setHungerLevel(-2);
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -88,6 +92,7 @@ public class QandAController {
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
         EndScreenController.clearInventory();
+        ItemsDescription.setHungerLevel(-2);
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
