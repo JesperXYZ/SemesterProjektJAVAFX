@@ -2,7 +2,7 @@ Mastering Diabetes
 
 Semester project 2023-2024, 1. semester
 A project based on United Nations third Sustainable Development Goal, Good health and well-being
-Group T4.1, Jonas Bossen, Jesper Bundesen, Rolf Vandsted, Ellen Bundgaard
+Group T4.1, Jonas Bossen, Jesper Bondesen, Rolf Vandsted, Ellen Bundgaard
 
 This game is about living with diabetes.
 The player has to do different activities and by eating properly make sure their blood sugar doesn't get too high or low.
