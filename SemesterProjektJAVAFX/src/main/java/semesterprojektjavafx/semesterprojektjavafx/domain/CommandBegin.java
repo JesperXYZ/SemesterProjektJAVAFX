@@ -34,13 +34,13 @@ public class CommandBegin extends BaseCommand implements Command {
             "Question of the day\n" +   //day 1
                   "Which of these lower your blood sugar?\n" +
                   "1. Physical activity \n" +
-                  "2. Rood and drinks \n" +
+                  "2. Food and drinks \n" +
                   "3. Public speaking \n" +
                   "4. Sleeping \n" +
                   "\nPick 1, 2, 3 or 4\n",
 
             "Question of the day\n" +   //day 2
-                    "What do you blood sugar level have to be to maintain a normal level?\n" +
+                    "What do your blood sugar level have to be, to maintain a normal level?\n" +
                     "1. 4-7 mmml/l \n" +
                     "2. 2-9 mmml/l \n" +
                     "3. 4-9 mmml/l \n" +
@@ -48,15 +48,15 @@ public class CommandBegin extends BaseCommand implements Command {
                     "\nPick 1, 2, 3 or 4\n",
 
             "Question of the day\n" +   //day 3
-                    "How dose alcohol affect your blood sugar? \n" +
-                    "1. It gets higer and you have to use insulin \n" +
+                    "How does alcohol affect your blood sugar? \n" +
+                    "1. It gets higher and you have to use insulin \n" +
                     "2. It falls and you have to eat or drink \n" +
                     "3. Alcohol hase no affect on on your blood sugar \n" +
                     "4. Alcohol can make your blood sugar rise and fall, you can therefor not drink alcohol if you have diabetes \n" +
                     "\nPick 1, 2, 3 or 4\n",
 
             "Question of the day\n" +   //day 4
-                    "Which og these make you blood sugar rise the most?\n" +
+                    "Which of these makes your blood sugar rise the most?\n" +
                     "1. Milk (250 ml) \n" +
                     "2. Almonds (15 g) \n" +
                     "3. Iced tea (250 ml) \n" +
@@ -64,15 +64,15 @@ public class CommandBegin extends BaseCommand implements Command {
                     "\nPick 1, 2, 3 or 4\n",
 
             "Question of the day\n" +   //day 5
-                    "How dose insulin affect your blood sugar?\n" +
-                    "1. Insulin signals to the muscles, adipose tissue and lever to consume sugar from the blood. Thereby insulin lower the blood sugar \n" +
+                    "How does insulin affect your blood sugar?\n" +
+                    "1. Insulin signals to the muscles, adipose tissue and lever to consume sugar from the blood. Thereby insulin lowers the blood sugar \n" +
                     "2. Insulin stimulate the production of glucose: it produce glucose in the lever which increases the blood sugar \n" +
-                    "3. Insulin works as a suger-stimulating hormone: It signals to the cells to increase the production of sugar to the blood resulting in an increases of the blood sugar \n" +
+                    "3. Insulin works as a sugar-stimulating hormone: It signals to the cells to increase the production of sugar to the blood resulting in an increase of the blood sugar \n" +
                     "4. Insulin makes the muscles unable to consume sugar while making the lever produce more sugar increasing the blood sugar \n" +
                     "\nPick 1, 2, 3 or 4\n",
 
             "Question of the day\n" +   //day 6
-                    "Which type of carbohydrate have a tendency to affect the blood sugar more dramatically then other types og carbohydrates?\n" +
+                    "Which type of carbohydrate have a tendency to affect the blood sugar more dramatically than other types of carbohydrates?\n" +
                     "1. Complex carbohydrates such as whole grain products \n" +
                     "2. Fat has a bigger affect on the blood sugar than carbohydrates \n" +
                     "3. Simple carbohydrates such as sugar has a tendency to make the blood sugar rise quickly \n" +
