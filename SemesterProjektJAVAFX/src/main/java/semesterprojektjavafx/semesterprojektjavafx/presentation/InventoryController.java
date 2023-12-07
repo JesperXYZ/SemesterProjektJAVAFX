@@ -5,6 +5,7 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.Inventory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class InventoryController {
 
@@ -42,7 +43,27 @@ private List<Label> labellist = new ArrayList<>();
 
         for (int i = 0; i<labellist.size(); i++){
             if (i<Inventory.inventoryStorage.size()){
-                labellist.get(i).setText(Inventory.inventoryStorage.get(i));
+                if (Objects.equals(Inventory.inventoryStorage.get(i), "milk")) {
+                    labellist.get(i).setText("Milk (250 ml)");
+                }
+                else if (Objects.equals(Inventory.inventoryStorage.get(i), "ice tea")) {
+                    labellist.get(i).setText("Ice tea (250 ml)");
+                }
+                else if (Objects.equals(Inventory.inventoryStorage.get(i), "almonds")) {
+                    labellist.get(i).setText("Almonds (15 g)");
+                }
+                else if (Objects.equals(Inventory.inventoryStorage.get(i), "apple")) {
+                    labellist.get(i).setText("Apple (110 g)");
+                }
+                else if (Objects.equals(Inventory.inventoryStorage.get(i), "glucosemeter")) {
+                    labellist.get(i).setText("Glucose meter");
+                }
+                else if (Objects.equals(Inventory.inventoryStorage.get(i), "insulininjector")) {
+                    labellist.get(i).setText("Insulin injector");
+                }
+                else {
+                    labellist.get(i).setText("Illegal item wtf");
+                }
             } else
                 labellist.get(i).setText(" ");
         }
