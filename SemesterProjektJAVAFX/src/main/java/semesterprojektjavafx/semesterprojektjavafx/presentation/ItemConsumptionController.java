@@ -47,7 +47,7 @@ public class ItemConsumptionController {
                 item.setText("Almonds (15 g)");
             }
             else if (Objects.equals(itemName, "apple")) {
-                item.setText("Apple 110 g");
+                item.setText("Apple (110 g)");
             }
             else {
                 item.setText("Illegal item wtf");
