@@ -23,9 +23,9 @@ public class CommandBegin extends BaseCommand implements Command {
             "Work hard and physical or see how little you can do in a day",
             "That's not for me or i'm going to be the next ronaldo",
             "Help or Leave",
-            "Brunsviger or Kitkat",
+            "Brownie or Kitkat",
             "Beer or Vodka&Juice"};
-    static String[] choice1 = {"Be active outside", "Work hard ", "That life is not for me", "Help!", "Brunsviger", "Beer"};
+    static String[] choice1 = {"Be active outside", "Work hard ", "That life is not for me", "Help!", "Brownie", "Beer"};
     static String[] choice2 = {"Relax inside", "Less is more", "I'm going to be the next Ronaldo!", "leave", "KitKat", "Vodka-Juice"};
     static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-3,-3,-5},{-2,-5,0,0},{2,2,2,1},{1,-3,3,0}};
 
