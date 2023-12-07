@@ -12,23 +12,31 @@ import java.io.IOException;
 
 public class GameLauncher extends Application {
 
-    private static final String HOUSEENTRY_FILE = "/semesterprojektjavafx/semesterprojektjavafx/houseEntry.fxml";
+    private static final String INTRODUCTION_FILE = "/semesterprojektjavafx/semesterprojektjavafx/introduction.fxml";
 
-    Stage stage;
-    Scene scene;
-    Parent root;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     // returner det nuværende rum (Space) Game.context.getCurrent();
     // returner de tilgængelige items i rummet (String[]) Game.context.getCurrentAvailableItems();
     // returner den tilgængelige aktivitet i rummet (String) Game.context.getCurrentActivity();
 
     @Override
-    public void start(Stage stage) throws Exception {
-        root = (Parent) FXMLLoader.load(getClass().getResource(HOUSEENTRY_FILE));
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(INTRODUCTION_FILE));
+        Parent root = loader.load();
+        IntroductionController controller = loader.getController();
+        controller.setStage(primaryStage);
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
 
+        public static void main(String[] args) {
+            launch(args);
+        }
+    }
 
         /*
         boolean hungerLevelLow = false, hugerLevelHigh = false, glucoseLevelLow = false, glucoseLevelHigh = false;
@@ -70,10 +78,6 @@ public class GameLauncher extends Application {
                 Context.makeDone();
             }
         }*/
-    }
-    public static void main(String[] args){
-        launch(args);
-    }
     /*
     @FXML
     Stage game = new Stage();
@@ -153,4 +157,3 @@ public class GameLauncher extends Application {
             goDown();
         }
     }*/
-}
