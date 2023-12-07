@@ -38,7 +38,7 @@ public class EndScreenController {
         }
     }
 
-    public void clearInventory(){
+    public static void clearInventory(){
         String[] items = {"milk", "almonds", "ice tea", "apple", "insulininjector", "glucosemeter"};
         while (Context.getCurrentInventory().contains("milk")||Context.getCurrentInventory().contains("almonds")||Context.getCurrentInventory().contains("ice tea")||Context.getCurrentInventory().contains("apple")||Context.getCurrentInventory().contains("insulininjector")||Context.getCurrentInventory().contains("glucosemeter")) {
             for (int i = 0; i < items.length; i++) {

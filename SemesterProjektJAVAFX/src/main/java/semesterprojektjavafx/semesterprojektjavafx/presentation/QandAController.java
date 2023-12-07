@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import semesterprojektjavafx.semesterprojektjavafx.domain.AnswerSaver;
 import semesterprojektjavafx.semesterprojektjavafx.domain.CommandBegin;
 import semesterprojektjavafx.semesterprojektjavafx.domain.DayCount;
 
@@ -33,8 +34,10 @@ public class QandAController {
         } else {
             System.out.println("That is not the right answer...\nIf you keep playing you might learn it");
         }
+        AnswerSaver.saveAnswer("Dag: " + DayCount.getDay() + " - Svar: 1");  //Metode til at gemme svar fra brugeren.
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
+        EndScreenController.clearInventory();
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -48,8 +51,10 @@ public class QandAController {
         } else {
             System.out.println("That is not the right answer...\nIf you keep playing you might learn it");
         }
+        AnswerSaver.saveAnswer("Dag: " + DayCount.getDay() + " - Svar: 2");  //Metode til at gemme svar fra brugeren.
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
+        EndScreenController.clearInventory();
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -63,8 +68,10 @@ public class QandAController {
         } else {
             System.out.println("That is not the right answer...\nIf you keep playing you might learn it");
         }
+        AnswerSaver.saveAnswer("Dag: " + DayCount.getDay() + " - Svar: 3");  //Metode til at gemme svar fra brugeren.
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
+        EndScreenController.clearInventory();
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -78,8 +85,10 @@ public class QandAController {
         } else {
             System.out.println("That is not the right answer...\nIf you keep playing you might learn it");
         }
+        AnswerSaver.saveAnswer("Dag: " + DayCount.getDay() + " - Svar: 4");  //Metode til at gemme svar fra brugeren.
         DayCount.plusDay(1);
         CommandBegin.setActivityDone(false);
+        EndScreenController.clearInventory();
 
         root = FXMLLoader.load(getClass().getResource("/semesterprojektjavafx/semesterprojektjavafx/bedroom.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
