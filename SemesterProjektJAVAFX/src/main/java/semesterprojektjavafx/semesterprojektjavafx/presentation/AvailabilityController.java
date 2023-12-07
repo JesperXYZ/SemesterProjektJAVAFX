@@ -52,7 +52,7 @@ public class AvailabilityController {
             item1.setText("Milk (250 ml)");
             item2.setText("Almonds (15 g)");
             item3.setText("Ice tea (250 ml)");
-            item4.setText("Apple (110)");
+            item4.setText("Apple (110 g)");
             item1.setDisable(false);
         }
     }

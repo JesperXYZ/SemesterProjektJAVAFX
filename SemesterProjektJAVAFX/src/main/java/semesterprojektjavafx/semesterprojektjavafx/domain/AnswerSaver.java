@@ -12,6 +12,10 @@ public class AnswerSaver {
         PrintWriter pw;
 
         try {
+            if (!answersFile.exists()) {
+                answersFile.createNewFile();
+            }
+
             pw = new PrintWriter(new FileWriter(answersFile, true));
             // ,true laver det til append tilstand som gør at den gamle fil ikke overrides, og dermed tilføjer svar til den gamle fil.
             pw.println("Brugernes svar: " + answer);
