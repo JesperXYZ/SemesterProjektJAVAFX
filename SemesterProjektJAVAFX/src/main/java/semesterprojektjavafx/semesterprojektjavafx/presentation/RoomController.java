@@ -198,9 +198,7 @@ public class RoomController {
         scheduler.schedule(()->{
             Platform.runLater(()->{errorLabel.setText("");});}, time, TimeUnit.MICROSECONDS);
     }
-    /*public void shutdownScheduler(){
-        scheduler.shutdown();
-    }*/
+
     @FXML
     void beginActivity(ActionEvent event) throws IOException, InterruptedException {
         if (Context.getCurrent() != null) {

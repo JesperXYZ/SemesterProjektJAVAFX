@@ -15,6 +15,7 @@ import semesterprojektjavafx.semesterprojektjavafx.domain.Inventory;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ItemConsumptionController {
     @FXML
@@ -36,7 +37,21 @@ public class ItemConsumptionController {
     private void updateItemVisibility(String itemName, MenuItem item) {
         if (Inventory.inventoryStorage.contains(itemName)) {
             item.setVisible(true);
-            item.setText(itemName);
+            if (Objects.equals(itemName, "milk")) {
+                item.setText("Milk (250 ml)");
+            }
+            else if (Objects.equals(itemName, "ice tea")) {
+                item.setText("Ice tea (250 ml)");
+            }
+            else if (Objects.equals(itemName, "almonds")) {
+                item.setText("Almonds (15 g)");
+            }
+            else if (Objects.equals(itemName, "apple")) {
+                item.setText("Apple (110 g)");
+            }
+            else {
+                item.setText("Illegal item wtf");
+            }
         } else {
             item.setVisible(false);
         }
@@ -97,7 +112,7 @@ public class ItemConsumptionController {
     }
 
     private void reloadScene(ActionEvent event) throws IOException {
-        //Logic to convert the currentSpaceName to the absolute path of its fxml file
+        //Logik til at konvertere currentSpaceName til den absolut path til FXML fil
         Space currentSpace = Game.context.getCurrent();
         String currentSpaceName = currentSpace.getName();
         String nameWithoutTHE;
@@ -118,7 +133,7 @@ public class ItemConsumptionController {
         }
         String pathName = "/semesterprojektjavafx/semesterprojektjavafx/" + nameWithoutTHELowerCaseWithoutSpace2 + ".fxml";
 
-        // Reloads the scene to initialize the label in GlucoseLabelController immediately
+        // Reloads scenen for at initialize Lablen i GlucoseLabelController med det samme og ikke først når man går i nyt rum
         FXMLLoader loader = new FXMLLoader(getClass().getResource(pathName));
         Parent root = loader.load();
         Scene scene = new Scene(root);

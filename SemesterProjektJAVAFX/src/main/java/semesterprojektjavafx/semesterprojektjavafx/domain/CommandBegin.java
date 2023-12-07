@@ -15,20 +15,20 @@ public class CommandBegin extends BaseCommand implements Command {
             "you went to Proud Mary!"};
     static String[] question = {"you have a break, what do you do in your break?",
             "you are at work, what do you want to do?",
-            "what mindset do you have?",
+            "There is a scout at your practice! what do you do?",
             "your mom need you to help gardening for 7 hours! what do you do?",
             "there is both a big piece of cake and candy at the party. what do you choose?",
             "you need a drink(or many). what do you choose?"};
-    String[] choices = {"basket or chillaxing",
-            "grind for raise or browse TikTok",
-            "loser mindset or ronaldo mindset",
+    String[] choices = {"be active outside or relax inside",
+            "Work hard and psysical or see how little you can do in a day",
+            "Thats not for me or im gonna be the next ronaldo",
             "help or leave",
             "brunsviger or Kitkat",
             "beer or vodkajuice"};
-    static String[] choice1 = {"basket", "grind", "loser", "help", "brunsviger", "beer"};
-    static String[] choice2 = {"chillaxing", "browse", "ronaldo", "leave", "KitKat", "vodkajuice"};
+    static String[] choice1 = {"Be active outside", "Work hard ", "That life is not for me", "help", "brunsviger", "beer"};
+    static String[] choice2 = {"Relax inside", "less is more", "im gonna be the next Ronaldo!", "leave", "KitKat", "vodkajuice"};
     static double[][] setLevel ={{-2,-3,-0.5,-1},{-1.5,-3,-0.5,-1},{-1,-5,-3,-5},{-3,-5,0,0},{3,2,3,1},{1,-3,3,0}};
-    //0=glucose1 1=hunger1 2=glucose2 3=hunger2
+
 
     static String[] nightQuestion = {"Question of the day\n" +
                 "Which of these lower your blood sugar?\n" +
