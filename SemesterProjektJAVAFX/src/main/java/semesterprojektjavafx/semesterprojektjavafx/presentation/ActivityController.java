@@ -27,7 +27,7 @@ public class ActivityController {
     @FXML private Button choice1;
     @FXML private Button choice2;
 
-    //initialize is a method that is called when the FXML is loaded
+    //initialize er en metode der er kaldt hver gang en FMXL fil er loaded
     public void initialize(){
         String activityDescription = (CommandBegin.getBegun()+"\n"+CommandBegin.getQuestion());
         activityLabel.setText(activityDescription);

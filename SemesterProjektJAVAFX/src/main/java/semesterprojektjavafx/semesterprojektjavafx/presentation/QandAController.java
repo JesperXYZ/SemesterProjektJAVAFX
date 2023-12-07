@@ -22,7 +22,6 @@ public class QandAController {
 
     @FXML private Label sleepLabel;
 
-    //initialize is a method that is called when the FXML is loaded
     public void initialize(){
         String nightQuestion = (CommandBegin.getNightQuestion());
         sleepLabel.setText(nightQuestion);

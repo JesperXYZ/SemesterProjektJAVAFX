@@ -6,14 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
-
 import semesterprojektjavafx.semesterprojektjavafx.domain.Game;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Inventory;
 import semesterprojektjavafx.semesterprojektjavafx.domain.ItemsDescription;
 import semesterprojektjavafx.semesterprojektjavafx.domain.Space;
-
 import java.io.IOException;
 
 public class GetGlucoseLevelController {
@@ -33,7 +30,7 @@ public class GetGlucoseLevelController {
             glucoseLevelString = glucoseLevelStringFake.substring(0, 3);
         }
 
-        //Logic to convert the currentSpaceName to the absolute path of its fxml file
+        //Logik til at konvertere currentSpaceName til den absolut path til FXML fil
         Space currentSpace = Game.context.getCurrent();
         String currentSpaceName = currentSpace.getName();
         String nameWithoutTHE;
@@ -57,7 +54,7 @@ public class GetGlucoseLevelController {
         }
         String pathName = "/semesterprojektjavafx/semesterprojektjavafx/"+nameWithoutTHELowerCaseWithoutSpace2+".fxml";
 
-        //reloads the scene to initialize the label in GlucoseLabelController immediately
+        //Reloads scenen for at initialize Lablen i GlucoseLabelController med det samme og ikke når man går i nyt rum
         root = FXMLLoader.load(getClass().getResource(pathName));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
