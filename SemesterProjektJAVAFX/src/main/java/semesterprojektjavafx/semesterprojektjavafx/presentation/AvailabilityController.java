@@ -103,7 +103,7 @@ public class AvailabilityController {
         reloadScene(event);
     }
     private void reloadScene(ActionEvent event) throws IOException {
-        //Logic to convert the currentSpaceName to the absolute path of its fxml file
+        //Logik til at konvertere currentSpaceName til den absolut path til FXML fil
         Space currentSpace = Game.context.getCurrent();
         String currentSpaceName = currentSpace.getName();
         String nameWithoutTHE;
@@ -124,7 +124,7 @@ public class AvailabilityController {
         }
         String pathName = "/semesterprojektjavafx/semesterprojektjavafx/" + nameWithoutTHELowerCaseWithoutSpace2 + ".fxml";
 
-        // Reloads the scene to initialize the label in GlucoseLabelController immediately
+        // Reloads scenen for at initialize Lablen i GlucoseLabelController med det samme og ikke når man går i nyt rum
         FXMLLoader loader = new FXMLLoader(getClass().getResource(pathName));
         Parent root = loader.load();
         Scene scene = new Scene(root);

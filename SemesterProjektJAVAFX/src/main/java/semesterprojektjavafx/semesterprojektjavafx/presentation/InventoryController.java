@@ -29,7 +29,7 @@ private List<Label> labellist = new ArrayList<>();
 
 
 
-
+// tilføjer de Labels der er lavet til inventory og laver et loop henter data fra Inventory.inventoryStorage og sætter det ind på forskellige labels
     public void initialize(){
         labellist.add(label1);
         labellist.add(label2);
