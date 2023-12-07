@@ -43,7 +43,6 @@ private List<Label> labellist = new ArrayList<>();
 
         for (int i = 0; i<labellist.size(); i++){
             if (i<Inventory.inventoryStorage.size()){
-                //labellist.get(i).setText(Inventory.inventoryStorage.get(i));
                 if (Objects.equals(Inventory.inventoryStorage.get(i), "milk")) {
                     labellist.get(i).setText("Milk (250 ml)");
                 }
